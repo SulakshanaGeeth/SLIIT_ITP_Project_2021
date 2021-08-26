@@ -9,7 +9,7 @@ Please go under edit and edit this file as needed for your project
 ### Member 5 - IT20183554 - M.C.Chandrasena (ChiranjayaChandrasena)
 ### Member 6 - IT20244170 - K.P.S.G.G. Wijegunarathna (SulakshanaGeeth)
 ### Member 7 - IT20502874 - B.W.P.M.Thilakarathne (PThilakarathne)
-### Member 8 - 
+### Member 8 - IT20214920 - E.D.M.Kavindya (Mkavi99)
 
 #### Brief Description of Project - This is a project done for 2nd year 2nd semester information technology project(ITP) @SLIIT. this is a fully functioning learning management system developed for Imax higher education institute.
 #### Technologies used - MERN Stack
