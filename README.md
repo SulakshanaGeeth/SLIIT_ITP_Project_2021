@@ -7,7 +7,7 @@ Please go under edit and edit this file as needed for your project
 ### Member 3 - 
 ### Member 4 - 
 ### Member 5 - 
-### Member 6 - 
+### Member 6 - IT20244170 - K.P.S.G.G. Wijegunarathna (SulakshanaGeeth)
 ### Member 7 - 
 ### Member 8 - 
 
