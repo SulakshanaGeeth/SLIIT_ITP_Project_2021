@@ -3,7 +3,7 @@ Please go under edit and edit this file as needed for your project
 # Project Name - ITP2021_S2_B03_G04
 # Batch - IT03.1
 ### Group Leader - IT19992358 - M.A.N.C.Matharaarachchi (nuwanmataraarachchi)
-### Member 2 - 
+### Member 2 - IT20247140 - D.M.N.J. Disanayaka (Naduladisanayaka494)
 ### Member 3 - 
 ### Member 4 - 
 ### Member 5 - 
