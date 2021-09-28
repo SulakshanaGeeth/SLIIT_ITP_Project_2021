@@ -31,6 +31,16 @@ import RejectNewClassRequest from './Components/ClassManagement/rejectNewClassRe
 import TeacherNewClassRequest from './Components/ClassManagement/teacherNewClassRequest'
 
 
+// Content Management
+//import Header2 from './Components/ClassManagement/header';
+import Body from './Components/ContentManagement/Body';
+import AddNotice from './Components/ContentManagement/AddNotice';
+import AddLink from './Components/ContentManagement/AddLink';
+import AddTute from './Components/ContentManagement/AddTute';
+import UpdateNotice from './Components/ContentManagement/UpdateNotice';
+import UpdateLink from './Components/ContentManagement/UpdateLink';
+import StudentView from './Components/ContentManagement/StudentView';
+
 
 
 const App = () => (
@@ -64,6 +74,15 @@ const App = () => (
       <Route path = "/teacher/teacher/newClassRequests" exact component={TeacherNewClassRequest}/>
         
 
+      {/* Content Mangemnt */}
+      {/*<Header2/>*/}
+      <Route path = "/content/class/:id" exact component={Body}/>
+      <Route path = "/content/addNotice/:id" exact component = {AddNotice} />
+      <Route path = "/content/addlink/:id" exact component = {AddLink} />
+      <Route path = "/content/addtute/:id" exact component = {AddTute} />
+      <Route path = "/content/updatenotice/:id" exact component = {UpdateNotice} />
+      <Route path = "/content/updatelink/:id" exact component = {UpdateLink} />
+      {/*<Route path = "/content/studentView/:id" exact component = {StudentView} />*/}
 
     </main>
     <Footer/>
