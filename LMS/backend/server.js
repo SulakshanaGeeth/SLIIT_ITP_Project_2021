@@ -14,8 +14,13 @@ const { notFound, errorHandler } = require("./middlewares/errorMiddleware");
 const bankRouter = require("./routes/TeacherPayment/bank");
 const withdrawRouter = require("./routes/TeacherPayment/withdraw");
 const withdrawPaymentRouter = require("./routes/TeacherPayment/withdraw_payment");
-const classRouter = require("./routes/TeacherPayment/classTest");
+//const classRouter = require("./routes/TeacherPayment/classTest");
 const pending_payment_Router = require("./routes/TeacherPayment/pending_payments");
+
+//Class Management
+const classRouter = require("./routes/ClassManagement/newclassrequest");
+const classesRouter = require("./routes/ClassManagement/classes.js");
+const UpdateRouter = require("./routes/ClassManagement/updateclassrequest.js");
 
 const app = express();
 dotenv.config();
@@ -43,8 +48,14 @@ app.use("/api/notes",noteRoutes);
 app.use("/bank",bankRouter);
 app.use("/withdraw",withdrawRouter);
 app.use("/withdrawPayment",withdrawPaymentRouter);
-app.use("/classes",classRouter);
+//app.use("/classes",classRouter);
 app.use("/pending_payment",pending_payment_Router);
+
+
+//Class Management
+app.use("/newclassrequest", classRouter);
+app.use("/classes", classesRouter);
+app.use("/updateclassrequest", UpdateRouter);
 
 
 app.use(notFound);

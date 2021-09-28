@@ -4,15 +4,15 @@ const Schema = mongoose.Schema;
 
 const classSchema = new Schema({
 
-    teacher_id:{
-        type:String,
-        require:true
-    },
-    teacher_name:{
-        type:String,
-        require:true
-    },
     class_name : {
+        type : String,
+        required :true
+    },
+    teacher_id : {
+        type : String,
+        required :true
+    },
+    teacher_name : {
         type : String,
         required :true
     },
@@ -52,7 +52,7 @@ const classSchema = new Schema({
         type : Number,
         required :true
     }
-    
+
 })
 
 const Classes = mongoose.model("Classes", classSchema);
