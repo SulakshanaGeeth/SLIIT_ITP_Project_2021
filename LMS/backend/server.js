@@ -22,6 +22,13 @@ const classRouter = require("./routes/ClassManagement/newclassrequest");
 const classesRouter = require("./routes/ClassManagement/classes.js");
 const UpdateRouter = require("./routes/ClassManagement/updateclassrequest.js");
 
+//Content Management
+const noticeRouter = require("./routes/ContentManagement/notice.js");
+const linkRouter = require("./routes/ContentManagement/link.js");
+const tuteRouter = require("./routes/ContentManagement/tute.js");
+// const classesRouter = require("./routes/ContentManagement/classes.js");
+
+
 const app = express();
 dotenv.config();
 connectDB();
@@ -56,6 +63,13 @@ app.use("/pending_payment",pending_payment_Router);
 app.use("/newclassrequest", classRouter);
 app.use("/classes", classesRouter);
 app.use("/updateclassrequest", UpdateRouter);
+
+
+//jaliya
+app.use("/clsnotice", noticeRouter);
+app.use("/link", linkRouter);
+app.use("/tute", tuteRouter);
+// app.use("/classes", classesRouter);
 
 
 app.use(notFound);
