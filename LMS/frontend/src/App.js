@@ -10,15 +10,26 @@ import ProfileScreen from "./screens/ProfileScreen/ProfileScreen";
 
 
 // import Header from './componenents/TeacherPayment/Header';
-import AddBank from './componenents/TeacherPayment/AddBank';
-import AllBanks from './componenents/TeacherPayment/AllBanks';
-import UpdateBank from './componenents/TeacherPayment/UpdateBank'
-import DeleteBank from './componenents/TeacherPayment/deleteBank';
-import SelectBank from './componenents/TeacherPayment/SelectBank';
-import Withdraw from './componenents/TeacherPayment/Withdraw';
-import PendingPaymets from './componenents/TeacherPayment/PendingPaymets';
-import WithdrawHome from './componenents/TeacherPayment/WithdrawHome';
-import WithdrawPayment from './componenents/TeacherPayment/WithdrawPayment';
+import AddBank from './Components/TeacherPayment/AddBank';
+import AllBanks from './Components/TeacherPayment/AllBanks';
+import UpdateBank from './Components/TeacherPayment/UpdateBank'
+import DeleteBank from './Components/TeacherPayment/deleteBank';
+import SelectBank from './Components/TeacherPayment/SelectBank';
+import Withdraw from './Components/TeacherPayment/Withdraw';
+import PendingPaymets from './Components/TeacherPayment/PendingPaymets';
+import WithdrawHome from './Components/TeacherPayment/WithdrawHome';
+import WithdrawPayment from './Components/TeacherPayment/WithdrawPayment';
+
+//Class Management
+import NewClassRequest from './Components/ClassManagement/addClass'
+import AllNewClassRequest from './Components/ClassManagement/allNewClassRequests'
+import RequestDetails from './Components/ClassManagement/viewNewRequest'
+import AddClass from './Components/ClassManagement/newClassRequestDetails'
+import TeacherDashboard from './Components/ClassManagement/teacherDashboard'
+import AddUpdateRequest from './Components/ClassManagement/addUpdateClass'
+import RejectNewClassRequest from './Components/ClassManagement/rejectNewClassRequest'  
+import TeacherNewClassRequest from './Components/ClassManagement/teacherNewClassRequest'
+
 
 
 
@@ -41,6 +52,16 @@ const App = () => (
         <Route path="/pendingPayments" exact component={PendingPaymets} />
         <Route path="/WithdrawHome" exact component={WithdrawHome} />
         <Route path="/WithdrawPayment" exact component={WithdrawPayment} />
+
+      {/* Class Management */}
+      <Route path = "/teacher/save" exact component={NewClassRequest}/>
+      <Route path = "/teacher/newClassRequests" exact component={AllNewClassRequest}/>
+      <Route path = "/teacher/post/:id" exact component={RequestDetails}/> 
+      <Route path = "/teacher/addcls/:id" exact component={AddClass}/>
+      <Route path = "/teacher/classes" exact component={TeacherDashboard}/>
+      <Route path = "/teacher/addUpdateRequest/:id" exact component={AddUpdateRequest}/>
+      <Route path = "/teacher/rejectNewClass/:id" exact component={RejectNewClassRequest}/>
+      <Route path = "/teacher/teacher/newClassRequests" exact component={TeacherNewClassRequest}/>
         
 
 
