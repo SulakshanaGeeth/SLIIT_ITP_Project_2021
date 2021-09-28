@@ -1,5 +1,5 @@
 const router = require("express").Router();
-//let Classes = require("../../models/TeacherPayment/Classes");
+let Classes = require("../../models/ClassManagement/Classes");
 const Withdraw = require("../../models/TeacherPayment/Withdraw");
 
 
