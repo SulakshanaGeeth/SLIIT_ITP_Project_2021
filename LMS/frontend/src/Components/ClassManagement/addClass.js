@@ -62,7 +62,7 @@ export default class Addclass extends Component{
 
         console.log(data)
 
-        axios.post(`http://localhost:8070/newclassrequest/save`,data).then((res) =>{
+        axios.post(`http://localhost:3000/newclassrequest/save`,data).then((res) =>{
         if(res.data.success){
             alert("Request Sent")
             this.setState(

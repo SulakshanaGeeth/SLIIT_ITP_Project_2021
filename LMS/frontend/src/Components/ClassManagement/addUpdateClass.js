@@ -49,7 +49,7 @@ export default class NewClassRequestDetails extends Component{
 
         console.log(data)
 
-        axios.put(`http://localhost:8070/classes/update/${id}`,data).then((res) =>{
+        axios.put(`http://localhost:3000/classes/update/${id}`,data).then((res) =>{
         if(res.data.success){
             alert("Class updated")
          }
@@ -61,7 +61,7 @@ export default class NewClassRequestDetails extends Component{
 
         const id = this.props.match.params.id;
 
-        axios.get(`http://localhost:8070/classes/class/${id}`).then((res) =>{
+        axios.get(`http://localhost:3000/classes/class/${id}`).then((res) =>{
             if(res.data.success){
                 this.setState({
                     class_name:res.data.classes.class_name,
