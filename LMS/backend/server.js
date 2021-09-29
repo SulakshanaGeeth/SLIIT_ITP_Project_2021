@@ -28,6 +28,10 @@ const linkRouter = require("./routes/ContentManagement/link.js");
 const tuteRouter = require("./routes/ContentManagement/tute.js");
 // const classesRouter = require("./routes/ContentManagement/classes.js");
 
+//Admin panel administration
+const NoticeRouter =  require("./routes/AdminpanelAdministration/Notices");
+
+
 
 const app = express();
 dotenv.config();
@@ -70,6 +74,9 @@ app.use("/clsnotice", noticeRouter);
 app.use("/link", linkRouter);
 app.use("/tute", tuteRouter);
 // app.use("/classes", classesRouter);
+
+//admin panel
+app.use("/Notice",NoticeRouter);
 
 
 app.use(notFound);
