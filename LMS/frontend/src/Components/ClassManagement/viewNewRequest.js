@@ -13,7 +13,7 @@ export default class ViewNewClassRequest extends Component{
 
             const id = this.props.match.params.id;
 
-            axios.get(`http://localhost:8070/newclassrequest/post/${id}`).then((res) =>{
+            axios.get(`http://localhost:3000/newclassrequest/post/${id}`).then((res) =>{
                 if(res.data.success){
                     this.setState({
                         newclassrequests:res.data.newclassrequests

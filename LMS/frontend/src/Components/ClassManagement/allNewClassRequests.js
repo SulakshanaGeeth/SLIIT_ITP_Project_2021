@@ -15,7 +15,7 @@ export default class Requests extends Component{
     }
 
     retrieveRequests(){
-        axios.get("http://localhost:8070/NewClassRequest/newClassRequests").then(res =>{
+        axios.get("http://localhost:3000/NewClassRequest/newClassRequests").then(res =>{
             if(res.data.success){
                 this.setState({
                     newclassrequests:res.data.existingRequests 
@@ -27,7 +27,7 @@ export default class Requests extends Component{
     }
 
     onDelete = (id) => {
-        axios.delete(`http://localhost:8070/NewClassRequest/delete/${id}`).then((res) =>{
+        axios.delete(`http://localhost:3000/NewClassRequest/delete/${id}`).then((res) =>{
             alert("Deleted Successfully");
             this.retrieveRequests();
         })
