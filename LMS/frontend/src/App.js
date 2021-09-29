@@ -41,6 +41,17 @@ import UpdateNotice from './Components/ContentManagement/UpdateNotice';
 import UpdateLink from './Components/ContentManagement/UpdateLink';
 import StudentView from './Components/ContentManagement/StudentView';
 
+//Admin panel
+import AddNoticeAdmin from './Components/Adminpaneladministration/AddNoticeAdmin';
+import AllNotices from './Components/Adminpaneladministration/AllNotices';
+import Navbar from './Components/Adminpaneladministration/Navbar';
+import ValiationForm from './Components/Adminpaneladministration/ValidationForm';
+import Update from './Components/Adminpaneladministration/Update';
+import Delete from './Components/Adminpaneladministration/Delete';
+import Noticeboard from './Components/Adminpaneladministration/Noticeboard';
+import Data from './Components/Adminpaneladministration/Data';
+
+
 
 
 const App = () => (
@@ -83,6 +94,20 @@ const App = () => (
       <Route path = "/content/updatenotice/:id" exact component = {UpdateNotice} />
       <Route path = "/content/updatelink/:id" exact component = {UpdateLink} />
       {/*<Route path = "/content/studentView/:id" exact component = {StudentView} />*/}
+      
+
+      ​​​
+      <Route path="/notice/add/" exact component={AddNoticeAdmin} />
+    <Route path="/AllNotices" exact component={AllNotices} />
+   
+    <Route path = "/nav"  exact component={Navbar}/>
+    <Route path = "/vali"  exact component={ValiationForm}/>
+  
+      
+    <Route path="/notice/update/:id" exact component={Update}/>
+    <Route path="/notice/delete/:id" exact component={Delete}/>
+    <Route path = "/notieboard"  exact component={Noticeboard}/>
+    <Route path = "/pdf"  exact component={Data}/>
 
     </main>
     <Footer/>
