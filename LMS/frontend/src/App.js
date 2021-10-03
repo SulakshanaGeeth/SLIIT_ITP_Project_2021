@@ -52,7 +52,11 @@ import Noticeboard from './Components/Adminpaneladministration/Noticeboard';
 import Data from './Components/Adminpaneladministration/Data';
 
 
-
+// Student Foram
+import ForumHome from './Components/StudentForm/ForumHome';
+import AddQuestion from './Components/StudentForm/AddQuestion';
+import EditQuestion from './Components/StudentForm/EditQuestion';
+import ViewQuestion from './Components/StudentForm/ViewQuestion';
 
 const App = () => (
   <BrowserRouter>
@@ -108,6 +112,13 @@ const App = () => (
     <Route path="/notice/delete/:id" exact component={Delete}/>
     <Route path = "/notieboard"  exact component={Noticeboard}/>
     <Route path = "/pdf"  exact component={Data}/>
+
+    
+    {/* Student Form */}
+           <Route path="/forumhome" exact component = {ForumHome}></Route>
+          <Route path="/addquestion" exact component = {AddQuestion}></Route>
+          <Route path="/edit/:id" exact component = {EditQuestion}></Route>
+          <Route path="/ViewQuestion/:id" exact component = {ViewQuestion}></Route>
 
     </main>
     <Footer/>
