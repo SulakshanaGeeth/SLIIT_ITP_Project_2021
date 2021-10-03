@@ -55,7 +55,7 @@ app.use("/api/users",userRoutes);
 app.use("/api/notes",noteRoutes);
 
 
-
+//Teacher payment Management
 app.use("/bank",bankRouter);
 app.use("/withdraw",withdrawRouter);
 app.use("/withdrawPayment",withdrawPaymentRouter);

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import "./payment.css";
 
 export default function PendingPayments(props) {
   const [payment, setPayments] = useState([]);
@@ -18,6 +19,32 @@ export default function PendingPayments(props) {
     getpayments();
   }, []);
 
+  function getDetails(id) {
+    // console.log(id);
+    props.history.push("/teacherDetails/" + id);
+  }
+
+  function filterData(payment, SearchQry){
+    const result = payment.filter((payment)=>
+    payment.Teacher_name.toLowerCase().includes(SearchQry)
+    )
+    setPayments(result);
+  }
+
+  function Searchfunc (e) {
+    const SearchQry = e.currentTarget.value;
+    
+    axios
+        .get("http://localhost:3000/pending_payment")
+        .then((res) => {
+            filterData(res.data,SearchQry)
+        })
+        .catch((err) => {
+          alert(err.message);
+        });
+
+  }
+
   return (
     <div>
       <button
@@ -26,7 +53,10 @@ export default function PendingPayments(props) {
       >
         Back
       </button>
-      <h1 class="paywitdh1">Pending Payments</h1>
+      <p class="paywitdh2">Pending Payments</p>
+      <label className="teacherSearchLable" for="search">Search:</label>
+      <input type="search" className="teacherSearch" name="searchQuery" placeholder="Enter Teacher Name" 
+      onChange={Searchfunc}></input>
 
       <div className="box1">
         <table className="withdraw-table">
@@ -44,11 +74,11 @@ export default function PendingPayments(props) {
               <tr>
                 <td>{item.Teacher_name}</td>
                 <td>
-                  <button >get Details</button>
+                  <button className="" onClick={() =>getDetails(item.Teacher_ID)}>
+                    Get Details</button>
                 </td>
-                <td>{item.Withdraw_amout}</td>
-                <td><input type="checkbox" checked data-toggle="toggle"/></td>
-                
+                <td>Rs. {item.Withdraw_amout}</td>
+                <td>{item.State}</td>
               </tr>
             ))}
           </tbody>
