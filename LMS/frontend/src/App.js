@@ -19,6 +19,8 @@ import Withdraw from './Components/TeacherPayment/Withdraw';
 import PendingPaymets from './Components/TeacherPayment/PendingPaymets';
 import WithdrawHome from './Components/TeacherPayment/WithdrawHome';
 import WithdrawPayment from './Components/TeacherPayment/WithdrawPayment';
+import TeacherDetails from './Components/TeacherPayment/DisplayTeacherDetails';
+import TeacherPaymentReport from './Components/TeacherPayment/GetReport';
 
 //Class Management
 import NewClassRequest from './Components/ClassManagement/addClass'
@@ -56,7 +58,11 @@ import AddRequest from "./Components/PaymentManagement/AddRequest";
 import Addpayment from "./Components/PaymentManagement/Addpayment";
 
 
-
+// Student Foram
+import ForumHome from './Components/StudentForm/ForumHome';
+import AddQuestion from './Components/StudentForm/AddQuestion';
+import EditQuestion from './Components/StudentForm/EditQuestion';
+import ViewQuestion from './Components/StudentForm/ViewQuestion';
 
 const App = () => (
   <BrowserRouter>
@@ -77,6 +83,8 @@ const App = () => (
         <Route path="/pendingPayments" exact component={PendingPaymets} />
         <Route path="/WithdrawHome" exact component={WithdrawHome} />
         <Route path="/WithdrawPayment" exact component={WithdrawPayment} />
+        <Route path="/teacherDetails/:id" exact component={TeacherDetails} />
+        <Route path="/teacherGetReport/:id" exact component={TeacherPaymentReport} />
 
       {/* Class Management */}
       <Route path = "/teacher/save" exact component={NewClassRequest}/>
@@ -119,6 +127,14 @@ const App = () => (
     <Route path="/freeCard/add" exact component={AddRequest} />
     <Route path="/payment" exact component={Addpayment} />
 
+
+
+    
+    {/* Student Form */}
+           <Route path="/forumhome" exact component = {ForumHome}></Route>
+          <Route path="/addquestion" exact component = {AddQuestion}></Route>
+          <Route path="/edit/:id" exact component = {EditQuestion}></Route>
+          <Route path="/ViewQuestion/:id" exact component = {ViewQuestion}></Route>
 
 
     </main>

@@ -31,9 +31,15 @@ const tuteRouter = require("./routes/ContentManagement/tute.js");
 //Admin panel administration
 const NoticeRouter =  require("./routes/AdminpanelAdministration/Notices");
 
+
 //Payment Management
 const FreecardRouter = require("./routes/PaymentManagement/Freecards");
 const paymentRouter = require("./routes/PaymentManagement/Payments");
+
+//StudentForam
+const questionRoutes = require('./routes/StudentForm/questions');
+
+
 
 
 const app = express();
@@ -58,7 +64,7 @@ app.use("/api/users",userRoutes);
 app.use("/api/notes",noteRoutes);
 
 
-
+//Teacher payment Management
 app.use("/bank",bankRouter);
 app.use("/withdraw",withdrawRouter);
 app.use("/withdrawPayment",withdrawPaymentRouter);
@@ -81,9 +87,14 @@ app.use("/tute", tuteRouter);
 //admin panel
 app.use("/Notice",NoticeRouter);
 
+
 //payment Management
 app.use("/Payment",paymentRouter);
 app.use("/freeCard",FreecardRouter);
+
+//StudentForam
+app.use(questionRoutes);
+
 
 
 app.use(notFound);
