@@ -101,7 +101,6 @@ export default class NewClassRequestDetails extends Component{
         return(
             <div className ="container" style={{marginLeft:520, marginTop:60}}><br></br>
             <h2>{this.state.class_name}</h2>
-            <h6>Teacher name - {this.state.teacher_name}</h6>
             <h6>Subject - {this.state.subject}</h6>
             <h6>Grade - {this.state.grade}</h6>
             <h6>Type - {this.state.type}</h6>

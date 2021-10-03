@@ -5,7 +5,7 @@ export default class Requests extends Component{
     constructor(props){
         super(props);
 
-        localStorage.setItem('teacherID','61238d564e18353b383e449a');
+        // localStorage.setItem('teacherID','61238d564e18353b383e449a');
         
         
 
@@ -43,6 +43,21 @@ export default class Requests extends Component{
     render(){
         return(
             <div className ="container"><br></br>
+
+                <div style={{paddingLeft:250}}>
+                <br />
+
+                    <a class="btn btn-dark" href="/teacher/classes" role="button">Classes</a>&nbsp; 
+                    <a class="btn btn-dark" href="/teacher/save" role="button">Add New Class</a>&nbsp; 
+                    <a class="btn btn-dark" href="/teacher/teacher/newClassRequests" role="button">Class Request</a>&nbsp; 
+                    <a class="btn btn-dark" href="#" role="button">Payment</a>&nbsp; 
+                    <a class="btn btn-dark" href="#" role="button">Class Details</a>
+
+                <br /><br />
+                
+                </div>
+                <br /><br />
+
                 <h2>New Class Requests</h2><br></br>
                 <table class="table">
                     <thead class="thead-dark">
@@ -73,7 +88,7 @@ export default class Requests extends Component{
                         </tbody>
                         </table>
             
-                    
+                        <br /><br /><br />
             </div>
         )
     }

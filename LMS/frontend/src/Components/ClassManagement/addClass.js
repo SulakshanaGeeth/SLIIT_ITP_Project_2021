@@ -6,7 +6,7 @@ export default class Addclass extends Component{
     constructor(props){
         super(props);
 
-        localStorage.setItem('teacherID','61238d564e18353b383e449a');
+        // localStorage.setItem('teacherID','61238d564e18353b383e449a');
         var id = localStorage.getItem('teacherID');
         console.log(id);
 
@@ -26,7 +26,8 @@ export default class Addclass extends Component{
             end_time:"",
             status:"Pending",
             no_of_students:"0",
-            reason:"No reason added yet"
+            reason:"No reason added yet",
+            errors: {}
         }
     }
 
@@ -39,10 +40,28 @@ export default class Addclass extends Component{
         })
     }
 
+    formValidation = () =>{
+        const {class_name,grade,start_time} = this.state;
+        let isValid = true;
+        const errors = {};
+        if(class_name.includes(":")){
+            errors.class_nameLenght = " must"
+            isValid = false;
+        }
+        if(!start_time.includes(":")){
+            errors.start_timeLenght = "Username "
+            isValid = false;
+        }
+        this.setState({errors});
+        return isValid;
+    }
+
     onsubmit = (e) =>{
 
         e.preventDefault();
-        const {class_name,teacher_id,teacher_name,subject,grade,type,fee,day,start_time,end_time,status,no_of_students,reason} = this.state;
+        const isValid = this.formValidation();
+        if(isValid){
+        const {class_name,teacher_id,teacher_name,subject,grade,type,fee,day,start_time,end_time,status,no_of_students,reason,errors} = this.state;
 
         const data ={
             class_name:class_name,
@@ -85,12 +104,13 @@ export default class Addclass extends Component{
          }
        })
 
-    }
+    }}
 
    
 
 
     render(){
+        const {class_name, start_time, errors} = this.state;
         return(
             <div className ="container" style={{paddingLeft:200}}><br></br>
             <h2>Add New Class</h2><br></br>
@@ -130,6 +150,11 @@ export default class Addclass extends Component{
                     value={this.state.grade}
                     onChange={this.handleInputChange} style={{width:700}}></input>
                 </div>
+
+                
+                {Object.keys(errors).map((key)=>{
+                    return <div key = {key}>{errors[key]}</div>
+                })}
 
                 <div class="form-group">
                     <label for="type">Type</label>

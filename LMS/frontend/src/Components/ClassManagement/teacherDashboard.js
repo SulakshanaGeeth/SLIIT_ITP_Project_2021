@@ -31,6 +31,27 @@ export default class Classes extends Component{
         })
     }
 
+    filterData(classes, SearchQry){
+        const result = classes.filter((classes)=>
+        classes.class_name.toLowerCase().includes(SearchQry)
+    
+        
+        )
+        this.setState({classes:result})
+    
+      }
+      Searchfunc = (e) =>{
+        const SearchQry = e.currentTarget.value;
+        
+        axios.get("http://localhost:3000/classes").then(res =>{
+          if(res.data.success){
+    
+            this.filterData(res.data.existingRequests,SearchQry)
+    
+          }
+        })
+      }
+
 
    
 
@@ -55,7 +76,7 @@ export default class Classes extends Component{
                     <a class="btn btn-dark" href="/teacher/save" role="button">Add New Class</a>&nbsp; 
                     <a class="btn btn-dark" href="/teacher/teacher/newClassRequests" role="button">Class Request</a>&nbsp; 
                     <a class="btn btn-dark" href="/WithdrawHome" role="button">Payment</a>&nbsp; 
-                    <a class="btn btn-dark" href="#" role="button">Class Details</a>
+                    <a class="btn btn-dark" href="/teacher/classDetailsReport" role="button">Class Details</a>
 
                 <br /><br />
                 
@@ -64,11 +85,22 @@ export default class Classes extends Component{
                 <span class="border-left-0"> 
                 <h2 style={{fontSize: "40px",paddingLeft:450}}>Classes</h2><br></br>
 
+                <div className="col-lg-3 mt-2 mb-2">
+                    <input
+                    className="form-control"
+                    type="search"
+                    placeholder="Search"
+                    name="searchQuery"
+                    onChange={this.Searchfunc}>
+
+                    </input>
+                </div>
+
                 {this.state.classes.map((classes,index) =>(
 
                             <div style={{paddingLeft:250}}>
                                 <br></br> 
-                                <h3 class="card-text">
+                                <h3 class="card-text" >
                                    
                                    <a href = {`/content/class/${classes._id}`}>{classes.class_name}</a>
                                     
