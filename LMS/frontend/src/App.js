@@ -51,6 +51,10 @@ import Delete from './Components/Adminpaneladministration/Delete';
 import Noticeboard from './Components/Adminpaneladministration/Noticeboard';
 import Data from './Components/Adminpaneladministration/Data';
 
+//PaymentManagement
+import AddRequest from "./Components/PaymentManagement/AddRequest";
+import Addpayment from "./Components/PaymentManagement/Addpayment";
+
 
 
 
@@ -108,6 +112,14 @@ const App = () => (
     <Route path="/notice/delete/:id" exact component={Delete}/>
     <Route path = "/notieboard"  exact component={Noticeboard}/>
     <Route path = "/pdf"  exact component={Data}/>
+
+
+
+    {/* Payment Mangemnt */}
+    <Route path="/freeCard/add" exact component={AddRequest} />
+    <Route path="/payment" exact component={Addpayment} />
+
+
 
     </main>
     <Footer/>
