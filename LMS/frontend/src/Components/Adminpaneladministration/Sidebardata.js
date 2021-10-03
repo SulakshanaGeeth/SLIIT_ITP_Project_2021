@@ -40,13 +40,7 @@ export const Sidebardata=[
     cName : 'nav-text'
 
 }, 
-{
-    title : 'Analytics',
-    path : '/vali',
-    icon: <IoIcons.IoIosCash />,
-    cName : 'nav-text'
 
-}, 
 {
     title : 'Noticeboard',
     path : '/notieboard',
