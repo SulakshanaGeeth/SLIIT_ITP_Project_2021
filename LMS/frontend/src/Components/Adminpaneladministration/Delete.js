@@ -18,9 +18,11 @@ export default function Delete (props){
     return(
         
         <div className="container">
+            <div class="content">
             
             <h1>Notice delete Page</h1>
                 
+         </div>
          </div>
     )
 }
