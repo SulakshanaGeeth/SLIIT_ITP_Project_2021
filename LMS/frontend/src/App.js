@@ -31,6 +31,7 @@ import TeacherDashboard from './Components/ClassManagement/teacherDashboard'
 import AddUpdateRequest from './Components/ClassManagement/addUpdateClass'
 import RejectNewClassRequest from './Components/ClassManagement/rejectNewClassRequest'  
 import TeacherNewClassRequest from './Components/ClassManagement/teacherNewClassRequest'
+import ClassDetailsReport from './Components/ClassManagement/classDetailsReport'
 
 
 // Content Management
@@ -95,6 +96,7 @@ const App = () => (
       <Route path = "/teacher/addUpdateRequest/:id" exact component={AddUpdateRequest}/>
       <Route path = "/teacher/rejectNewClass/:id" exact component={RejectNewClassRequest}/>
       <Route path = "/teacher/teacher/newClassRequests" exact component={TeacherNewClassRequest}/>
+      <Route path = "/teacher/classDetailsReport" exact component={ClassDetailsReport}/>
         
 
       {/* Content Mangemnt */}

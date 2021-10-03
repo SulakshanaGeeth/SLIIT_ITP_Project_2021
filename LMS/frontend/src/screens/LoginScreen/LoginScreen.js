@@ -31,7 +31,7 @@ const LoginScreen = ({ history }) => {
         localStorage.setItem("teacherID", userInfo._id);
         localStorage.setItem("teacherName", userInfo.name);
         console.log(userInfo._id);
-        history.push("/WithdrawHome");
+        history.push("/teacher/classes");
       } else history.push("/profile");
     }
   }, [history, userInfo]);
