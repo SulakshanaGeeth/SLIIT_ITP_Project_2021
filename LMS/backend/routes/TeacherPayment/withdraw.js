@@ -68,4 +68,27 @@ router.route("/update/:id").put(async(req,res)=>{
 
 })
 
+
+router.route("/updateState/:id").put(async(req,res)=>{
+    
+    let ID = req.params.id;
+    
+    const {State}=req.body;
+
+    const updateState ={
+        
+        State
+    }
+
+    const update = await Withdraw.findOneAndUpdate({Teacher_ID: ID},updateState)
+    .then(()=>{
+        res.status(200).send({status: "State updated"})
+    }).catch((err)=>{
+        console.log(err);
+        res.status(500).send({status: "Error with updating data", error: err.message});
+    })
+
+
+})
+
 module.exports = router;

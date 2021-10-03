@@ -48,7 +48,11 @@ console.log(details);
               <td>{item.Request_date}</td>
               <td>{item.Withdraw_amout}</td>
               <td>{item.State}</td>
-              <td></td>
+              <td>
+                <button className="" onClick={() => props.history.push("/teacherGetReport/"+tid)}>
+                  Get Report
+                </button>
+              </td>
               
               
             </tr>

@@ -92,9 +92,9 @@ export default function Withdraw(props) {
               <td>{item.subject}</td>
               <td>{item.grade}</td>
               <td>{item.no_of_students}</td>
-              <td>{item.fee}</td>
+              <td>Rs. {item.fee}</td>
               {/* <td>{item.Total_Amount}</td> */}
-              <td>{item.no_of_students*item.fee}</td>
+              <td>Rs. {item.no_of_students*item.fee}</td>
               <p hidden>{Totalamount=Totalamount+item.no_of_students*item.fee}</p>
               
             </tr>
@@ -105,7 +105,7 @@ export default function Withdraw(props) {
               <td></td>
               <td></td>
               <td></td>
-              <td>{Totalamount}</td>
+              <td>Rs. {Totalamount}</td>
             </tr>
             </tbody>
             

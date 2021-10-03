@@ -19,6 +19,8 @@ import Withdraw from './Components/TeacherPayment/Withdraw';
 import PendingPaymets from './Components/TeacherPayment/PendingPaymets';
 import WithdrawHome from './Components/TeacherPayment/WithdrawHome';
 import WithdrawPayment from './Components/TeacherPayment/WithdrawPayment';
+import TeacherDetails from './Components/TeacherPayment/DisplayTeacherDetails';
+import TeacherPaymentReport from './Components/TeacherPayment/GetReport';
 
 //Class Management
 import NewClassRequest from './Components/ClassManagement/addClass'
@@ -73,6 +75,8 @@ const App = () => (
         <Route path="/pendingPayments" exact component={PendingPaymets} />
         <Route path="/WithdrawHome" exact component={WithdrawHome} />
         <Route path="/WithdrawPayment" exact component={WithdrawPayment} />
+        <Route path="/teacherDetails/:id" exact component={TeacherDetails} />
+        <Route path="/teacherGetReport/:id" exact component={TeacherPaymentReport} />
 
       {/* Class Management */}
       <Route path = "/teacher/save" exact component={NewClassRequest}/>

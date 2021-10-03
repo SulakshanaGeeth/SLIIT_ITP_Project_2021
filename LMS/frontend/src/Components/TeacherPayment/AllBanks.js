@@ -30,8 +30,17 @@ export default function AllBanks(props) {
   }
 
   function Delete(id) {
-    console.log(id);
-    props.history.push("/bank/delete/" + id);
+    const confirmBox = window.confirm(
+      "Do want to delete this Bank Details ?"
+    )
+    if (confirmBox === true) {
+      console.log(id);
+      props.history.push("/bank/delete/" + id);
+    }
+    else{
+      props.history.push("/bank/");
+    }
+    
   }
 
   function Addroute(){  
@@ -55,8 +64,8 @@ export default function AllBanks(props) {
                 <td>Bank Name</td>
                 <td>Bank Name</td>
                 <td>Account Holder's Name</td>
-                <td>td1</td>
-                <td>td2</td>
+                <td>Edit Details</td>
+                <td>Delete Details</td>
 
             </tr>
             </thead>  
