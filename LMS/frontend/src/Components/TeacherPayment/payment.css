@@ -193,7 +193,7 @@
 }
 
 .lb_Acc_no{
-  margin-left: 10.65vw;
+  margin-left: 15vw;
   margin-bottom: 5.5vh;
 }
 
@@ -210,7 +210,7 @@
 }
 
 .lb_branch_name{
-  margin-left: 10.65vw;
+  margin-left: 15vw;
 }
 #branch_name{
   margin-left: 4.3vw;
@@ -249,7 +249,7 @@
 /* All bank page */
 .box1{
   margin-left:15vw;
-  margin-bottom: 31vh;
+  /* margin-bottom: 31vh; */
 }
 .box2{
   margin-left:15vw;

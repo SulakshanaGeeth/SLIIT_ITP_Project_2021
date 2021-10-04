@@ -51,7 +51,7 @@ export default function AllBanks(props) {
   console.log(banks);
 
   return (
-    <div className="allbanks">
+    <div className="allbanks" style={{minHeight: "580px"}}>
       <button className="backbtn" onClick={() => props.history.push("/WithdrawHome")}>
         Back</button>
       <h1 class="bankdetailsh2">Bank Accounts</h1>
@@ -91,7 +91,7 @@ export default function AllBanks(props) {
         </table>
       </div>
       <div class="col text-center">
-        <button class="bankadd_btn" className="btn btn-outline-success" style={{marginBottom:"18vh", marginTop:"3vh"}}
+        <button class="bankadd_btn" className="btn btn-outline-success" style={{marginTop:"3vh"}}
         onClick={() =>props.history.push("/bank/add")}>
           Add New Bank Account</button>
       </div>

@@ -58,7 +58,7 @@ export default function PendingPayments(props) {
       <input type="search" className="teacherSearch" name="searchQuery" placeholder="Enter Teacher Name" 
       onChange={Searchfunc}></input>
 
-      <div className="box1">
+      <div className="box1" style={{minHeight: "450px"}}>
         <table className="withdraw-table">
           <thead>
             <tr>

@@ -26,7 +26,7 @@ export default function PendingPayments(props) {
 
 
   function pdfGenerate(){
-    var doc = new jsPDF('landscape','px',[750,700]);
+    var doc = new jsPDF('landscape','px',[750,700],false);
     doc.html(document.querySelector("#PaymentDetails"),{
       callback: function(pdf){
         var pageCount = doc.internal.getNumberOfPages();
