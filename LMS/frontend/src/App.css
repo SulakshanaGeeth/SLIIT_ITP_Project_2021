@@ -59,13 +59,6 @@
 
 }
 
-
-
-/* ExamContentManagement */
-
-
-
-
 /* Basic styles */
 *,
 *::before,
@@ -219,7 +212,7 @@ label {
   
 
 #Notices{
-  width: 595px;
+  width: 6000px;
   height: 842px;
 }
 
