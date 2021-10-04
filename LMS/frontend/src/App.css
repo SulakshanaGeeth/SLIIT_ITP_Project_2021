@@ -28,8 +28,25 @@
   color: #61dafb;
 }
 
-#content{
-  padding: 40px;
+/* class management */
+.blueClasses:hover{
+  color: blue;
+  text-decoration: underline;
+}
+
+.greenClasses:hover{
+  color: green;
+  text-decoration: underline;
+}
+
+.redClasses:hover{
+  color: red;
+  text-decoration: underline;
+}
+
+.textUnderline:hover{
+  color: blue;
+  text-decoration: underline;
 }
 
 @keyframes App-logo-spin {

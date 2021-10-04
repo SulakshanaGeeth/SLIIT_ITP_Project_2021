@@ -20,7 +20,7 @@ router.post(`/save`,(req,res) =>{
 
 });
 
-//get all new classes
+//get all classes
 
 router.get("/classes", (req,res) =>{
     Classes.find().exec((err,newClasses)=>{
