@@ -63,7 +63,7 @@ export default class Classes extends Component{
 
     render(){
         return(
-            <div className ="container"><br></br>
+            <div className ="container" style={{minHeight:"80vh"}}><br></br>
 
                 <div style={{paddingLeft:280}}>
                     <br />
@@ -101,7 +101,7 @@ export default class Classes extends Component{
 
                             <a href ={`/teacher/addUpdateRequest/${classes._id}`} className="greenClasses">Edit </a>
                             <a href = "#" onClick ={() => this.onDelete(classes._id)} className="redClasses">Remove</a>
-                            <br></br>
+                            
                         </div>
                             
                     ))}
