@@ -18,7 +18,7 @@ function EditNotice(props) {
     }
 
     return (
-        <div class="form-group" className="container">
+        <div class="form-group" className="container" style={{minHeight: "80vh"}}>
                     <h5>Edit Notices</h5><br />
                     <br /><br />
 

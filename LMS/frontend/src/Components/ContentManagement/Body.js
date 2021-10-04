@@ -149,7 +149,7 @@ export default function Body(props) {
       }
 
     return (
-        <div className="container">
+        <div className="container" style={{minHeight: "80vh"}}>
             <div class="#" className="container">
                 <br /><br />
 
@@ -207,7 +207,7 @@ export default function Body(props) {
                 <div className = "col-lg-3 mt-2 mb-2">
                 <input type="search" name="searchQuery" className = "form-control" placeholder="Search.." onChange={Searchfunc}></input>
                 </div>
-                <br /><br />
+                <br />
 
                 <div class="border border-dark">
                     <ol>
