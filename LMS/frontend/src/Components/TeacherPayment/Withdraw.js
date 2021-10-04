@@ -65,7 +65,7 @@ export default function Withdraw(props) {
         Back</button>
       <h1 class="paywitdh1">Payment Withdrawal</h1>
       
-      <div className="box1">
+      <div className="box3">
         <table className="withdraw-table">
           <thead>
           <tr>
@@ -117,7 +117,8 @@ export default function Withdraw(props) {
       <h3 class="displyAmount">Deduct Amount for Institute: Rs.{deductAmount}</h3>
       <h3 class="displyAmount">Total Amount for withdraw: Rs.{withdrawAmount}</h3>
       <div class="col text-center">
-      <button type="button" className="btn btn-outline-success btn-lg mt-3" onClick={sendData}>
+      <button type="button" className="btn btn-outline-success btn-lg mt-3" onClick={sendData}
+      style={{marginBottom:"2vh"}}>
         Next
       </button>
       </div>

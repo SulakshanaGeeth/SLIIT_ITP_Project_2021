@@ -31,7 +31,7 @@ const history = useHistory();
 
 useEffect(() => {
   if (userInfo) {
-    history.push("/mynotes");
+    history.push("/ExamStudentView");
   }
 }, [history, userInfo]);
 

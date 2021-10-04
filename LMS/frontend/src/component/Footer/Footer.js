@@ -3,24 +3,13 @@ import { Col, Container, Row } from "react-bootstrap";
 
 const Footer = () => {
     return (
-       <footer
-            style={{
-        width: "100%",
-        position: "relative",
-        bottom: 0,
-        display: "flex",
-        justifyContent: "center",}}
->
-                <Container>
-                    <Row>
-                    <Col className="text-center py-3">Copyright &copy; IMS INSTITUTE</Col>
+        <footer class="bg-light text-center text-lg-start">
         
-                    </Row>
-
-                </Container>
-
-
-       </footer>
+        <div class="text-center p-2" style={{backgroundColor: "#158cba"}}>
+         <p style={{color: "white"}}>Copyright © IMAX</p>
+        </div>
+        
+        </footer>
     );
 };
 

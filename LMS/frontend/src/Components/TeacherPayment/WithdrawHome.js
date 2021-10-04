@@ -30,7 +30,7 @@ export default function WithdrawHome(props) {
       
       <button
         className="backbtn"
-        onClick={() => props.history.push("/WithdrawHome")}
+        onClick={() => props.history.push("/teacher/classes")}
       >
         Back
       </button>
@@ -90,7 +90,7 @@ export default function WithdrawHome(props) {
       >
         Payments
       </button>
-      <br />
+    
     </div>
   );
 }

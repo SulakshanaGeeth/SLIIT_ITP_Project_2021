@@ -20,15 +20,15 @@ export const Sidebardata=[
 
    }, 
    {
-    title : 'Teacher manegement',
-    path : '/',
+    title : 'Class manegement',
+    path : '/teacher/newClassRequests',
     icon: <IoIcons.IoIosPeople/>,
     cName : 'nav-text'
 
 }, 
 {
     title : 'Payment manegement',
-    path : ' /pdf',
+    path : '/pendingPayments',
     icon: <IoIcons.IoIosCard />,
     cName : 'nav-text'
 
