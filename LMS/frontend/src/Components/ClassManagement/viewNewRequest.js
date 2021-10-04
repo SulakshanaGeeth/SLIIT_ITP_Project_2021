@@ -28,7 +28,7 @@ export default class ViewNewClassRequest extends Component{
         const {class_name,subject,grade,type,fee,day,start_time,end_time,status,reason} = this.state.newclassrequests;
 
         return(
-            <div className = "container">
+            <div className = "container" style={{minHeight:"80vh"}}>
                 <br />
                     
                 <div style={{paddingLeft:280}}>

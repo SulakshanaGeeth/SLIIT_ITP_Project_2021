@@ -82,11 +82,25 @@ export default class NewClassRequestDetails extends Component{
 
     render(){
         return(
-            <div className ="container" style={{paddingLeft:200}}><br></br>
+            <div className ="container" style={{paddingLeft:200, minHeight:"80vh"}}><br></br>
 
-                <h2>Update Class Details</h2><br></br>
+                <div style={{paddingLeft:95}}>
+                    <br />
+
+                    <a className="btn btn-dark" href="/teacher/classes" role="button">Classes</a>&nbsp; 
+                    <a className="btn btn-dark" href="/teacher/save" role="button">Add New Class</a>&nbsp; 
+                    <a className="btn btn-dark" href="/teacher/teacher/newClassRequests" role="button">Class Request</a>&nbsp; 
+                    <a className="btn btn-dark" href="/WithdrawHome" role="button">Payment</a>&nbsp; 
+                    <a className="btn btn-dark" href="/teacher/classDetailsReport" role="button">Class Details</a>
+
+                    <br />
                 
-                <form>
+                </div>
+                <br /><br />
+
+                <h2 style={{paddingLeft:220}}>Update Class Details</h2><br></br>
+                
+                <form style={{paddingLeft:20}}>
 
                     <div className="form-group">
                         <label for="className">Class Name</label>

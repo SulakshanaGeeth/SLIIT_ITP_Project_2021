@@ -99,7 +99,7 @@ export default class NewClassRequestDetails extends Component{
 
     render(){
         return(
-            <div className ="container" style={{marginTop:50}}><br></br>
+            <div className ="container" style={{marginTop:50, minHeight:"80vh"}}><br></br>
                 <div className="card bg-secondary mb-3" style={{maxWidth:600, maxHeight:500, paddingLeft:140, paddingTop:50, paddingRight:10, marginLeft:250}}>
                     <div className="card-body">
                         <h2>{this.state.class_name}</h2>

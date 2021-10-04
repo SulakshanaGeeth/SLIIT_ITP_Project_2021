@@ -38,7 +38,7 @@ export default class Requests extends Component{
 
     render(){
         return(
-            <div className ="container"><br></br>
+            <div className ="container" style={{minHeight:"80vh"}}><br></br>
 
                 <div style={{paddingLeft:280}}>
                     <br />
@@ -78,7 +78,7 @@ export default class Requests extends Component{
 
                     </tbody>
                 </table>
-                <br /><br /><br />
+                <br/><br/>
             </div>
         )
     }
