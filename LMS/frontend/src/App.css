@@ -64,12 +64,6 @@
 /* ExamContentManagement */
 
 
-img {
-    width: 1705px;
-    margin: auto;
-    /* border: 3px solid #73AD21; */
-}
-
 
 /* Basic styles */
 *,
@@ -224,7 +218,7 @@ label {
   
 
 #Notices{
-  width: 595px;
+  width: 6000px;
   height: 842px;
 }
 
