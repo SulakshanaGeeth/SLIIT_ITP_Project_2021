@@ -45,7 +45,7 @@ export default function Update1(props) {
 
 
     return (
-        <div className="container">
+        <div className="container" style={{minHeight: "80vh"}}>
             <form onSubmit={UpdateData}>
                 <div className="mb-3">
                     <br />
