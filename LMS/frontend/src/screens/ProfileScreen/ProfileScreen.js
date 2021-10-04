@@ -8,8 +8,8 @@ import { updateProfile } from "../../actions/userActions";
 import Loading from "../../component/Loading";
 import "./ProfileScreen.css";
 import jsPDF from 'jspdf';
-
-const ProfileScreen = () => {
+import { logout } from "../../actions/userActions";
+const ProfileScreen = (props) => {
 
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -18,7 +18,10 @@ const ProfileScreen = () => {
     const [confirmPassword, setConfirmPassword] = useState("");
     const [picMessage, setPicMessage] = useState();
   
-
+    const logoutHandler = () => {
+      dispatch(logout());
+      history.push("/");
+    };
 
 
     const dispatch = useDispatch();
@@ -90,6 +93,8 @@ const ProfileScreen = () => {
 
     return( <MainScreen title="EDIT PROFILE">
     <div id="UserProfile">
+
+    
         <Row className="profileContainer">
             <Col md={6}>
 
@@ -152,11 +157,15 @@ const ProfileScreen = () => {
                   custom
                 />
               </Form.Group>
+
+              
               <Button type="submit" varient="primary">
                 Update
               </Button>
+              <Button variant="danger" className="btn btn-primary" onClick={logoutHandler}>
+              Delete Account</Button>
             </Form>
-            </Col>
+</Col>
 
 
             <Col
@@ -169,8 +178,12 @@ const ProfileScreen = () => {
              <img src={pic} alt={name} className="profilePic" />
              </Col>
         </Row>
-        <button onClick={pdfGenerate}>Download pdf</button>
-    </div>
+        <Button  onClick={pdfGenerate} type="submit" varient="primary">Download pdf</Button>
+
+     
+
+        
+        </div> 
     </MainScreen>
     )
 };
