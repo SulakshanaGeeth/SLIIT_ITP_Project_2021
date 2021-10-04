@@ -26,7 +26,7 @@ console.log(details);
   }, []);
 
   return (
-    <div>
+    <div style={{minHeight: "580px"}}>
       <button className="backbtn" onClick={() => props.history.push("/WithdrawHome")}>
         Back</button>
       <h1 class="paywitdh1">Request Payments</h1>
