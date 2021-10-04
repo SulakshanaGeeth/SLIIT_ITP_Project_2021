@@ -55,9 +55,23 @@ import Delete from './Components/Adminpaneladministration/Delete';
 import Noticeboard from './Components/Adminpaneladministration/Noticeboard';
 import Data from './Components/Adminpaneladministration/Data';
 
+
+//ExamsContentManagement
+import ContentDetails from './Components/ExamContentManagement/ContentDetails';
+import CreateContent from './Components/ExamContentManagement/CreateContent';
+import EditContent from './Components/ExamContentManagement/EditContent';
+import ExamHeader from './Components/ExamContentManagement/ExamHeader';
+import ExamContentHome from './Components/ExamContentManagement/ExamContentHome';
+import GovExamHome from './Components/ExamContentManagement/GovExamHome';
+import ExamPDFReport from './Components/ExamContentManagement/ExamPDFReport';
+import TeacherPageSelection from './Components/ExamContentManagement/TeacherPageSelection';
+import ExamStudentView from './Components/ExamContentManagement/ExamStudentView';
+
+
 //PaymentManagement
 import AddRequest from "./Components/PaymentManagement/AddRequest";
 import Addpayment from "./Components/PaymentManagement/Addpayment";
+
 
 
 // Student Foram
@@ -136,6 +150,20 @@ const App = () => (
           <Route path="/addquestion" exact component = {AddQuestion}></Route>
           <Route path="/edit/:id" exact component = {EditQuestion}></Route>
           <Route path="/ViewQuestion/:id" exact component = {ViewQuestion}></Route>
+
+
+    {/* ExamsContentManagement */}
+          <Route path="/ExamContent" exact component = {ExamContentHome}></Route>
+          <Route path="/ExamAdd" exact component = {CreateContent}></Route>
+          <Route path="/ExamEdit/:id" exact component = {EditContent}></Route>
+          <Route path="/ExamContentDetails/:id" exact component = {ContentDetails}></Route>
+          <Route path="/GovExamHome" exact component = {GovExamHome}></Route>
+          <Route path="/ExamHeader" exact component = {ExamHeader}></Route>
+          <Route path="/ExamReport" exact component = {ExamPDFReport}></Route>
+          <Route path="/ClassExamsPage" exact component = {TeacherPageSelection}></Route>
+          <Route path="/ExamStudentView" exact component = {ExamStudentView}></Route>
+
+          {/* <Route path="/content/:id" exact component = {ExamHeader}></Route> */}
 
 
     </main>
