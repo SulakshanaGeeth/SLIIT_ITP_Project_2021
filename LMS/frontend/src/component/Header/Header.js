@@ -28,36 +28,38 @@ const dispatch = useDispatch();
  
 
     return (
+      <div style={{  position: "sticky", top:0}}>
         <Navbar bg="primary" expand="lg" variant="dark">
         <Container>
+          
     <Navbar.Brand>
-      <Link to="/">   ©IMS-INSTITUTE</Link>
+      <Link to="/">   ©IMAX-INSTITUTE</Link>
       
    </Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
 
-        <Nav className="m-auto">
+        {/* <Nav className="m-auto">
         <Form inline>
           <FormControl type="text" placeholder="search" classname="mr-sm-2" />
           
       </Form>
 
 
-        </Nav>
+        </Nav> */}
 
 
-      {userInfo ?<Nav className="me-auto">
+      {userInfo ?<Nav className="me-auto " style={{marginLeft:"550px"}}>
         <Nav.Link href="#home">Home</Nav.Link>
         <Nav.Link>
-         <Link to="/mynotes">My Notes</Link> 
+         <Link to="/forumhome">Forum</Link> 
   
           </Nav.Link>
           <Nav.Link>
           <Link to="/GovExamHome">Exams</Link> 
 
           </Nav.Link>
-        <Nav.Link href="#link">My Classes</Nav.Link>
+        <Nav.Link href="/teacher/classes">Classes</Nav.Link>
         <NavDropdown title={userInfo?.name} id="basic-nav-dropdown">
           <NavDropdown.Item href="/profile">My Profile</NavDropdown.Item>
           <NavDropdown.Item 
@@ -65,7 +67,7 @@ const dispatch = useDispatch();
           >Log Out</NavDropdown.Item>
           <NavDropdown.Item href="#action/3.3">Genarate Report</NavDropdown.Item>
           <NavDropdown.Divider />
-          <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+          <NavDropdown.Item href="/freeCard/add">Request Free Card</NavDropdown.Item>
         </NavDropdown>
       </Nav>:<Nav>
       <Nav.Link>
@@ -79,6 +81,7 @@ const dispatch = useDispatch();
     </Navbar.Collapse>
     </Container>
 </Navbar>
+</div>
     );
 };
 

@@ -49,7 +49,7 @@ export default function PendingPayments(props) {
     <div>
       <button
         className="backbtn"
-        onClick={() => props.history.push("/WithdrawHome")}
+        onClick={() => props.history.push("/nav")}
       >
         Back
       </button>

@@ -26,13 +26,15 @@ const LoginScreen = ({ history }) => {
   useEffect(() => {
     if (userInfo) {
       if (userInfo._id == "613edad5e43df2560f8a6016") {
-        history.push("/pendingPayments");
+        history.push("/nav");
       } else if (userInfo.isAdmin) {
         localStorage.setItem("teacherID", userInfo._id);
         localStorage.setItem("teacherName", userInfo.name);
         console.log(userInfo._id);
-        history.push("/teacher/classes");
-      } else history.push("/profile");
+        history.push("/ClassExamsPage");
+      } else{
+        history.push("/ExamStudentView");
+      } 
     }
   }, [history, userInfo]);
 

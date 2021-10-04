@@ -62,7 +62,7 @@ export default function Dropdown(props){
     const [isActive, setIsActive] = useState(false);
     
     return (
-        <div class="box3">
+        <div class="box4">
         <button className="backbtn2" onClick={() => props.history.push("/withdraw")}>
         Back</button>
         <div className="dropdown" id="dropdown">
@@ -93,7 +93,7 @@ export default function Dropdown(props){
 </div>
 
             <form onSubmit={UpdateData}>
-                    <div class="box2" >
+                    <div class="box4" >
                     <div className="form-group1">
                         <label for="Acc_no" class="lb_Acc_no">Account Number</label>
                         <input type="text" className="Bank_form" id="Acc_no" Value={Acc_no} disabled
@@ -115,7 +115,8 @@ export default function Dropdown(props){
                     </div>
                     </div>
                     <div class="col text-center">
-                     <button type="submit" className="btn btn-outline-success btn-lg mt-5 mb-5">Submit</button> 
+                     <button type="submit" className="btn btn-outline-success btn-lg mt-5" style={{marginBottom:"19vh"}}>
+                         Submit</button> 
                      </div>
                 </form>
         

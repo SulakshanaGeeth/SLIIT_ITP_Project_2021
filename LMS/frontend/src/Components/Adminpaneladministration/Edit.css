@@ -44,7 +44,7 @@
         -o-transform: rotate(45deg);
            transform: rotate(45deg);
 }
-.td {
+/* .td {
    text-align: center;
  }
  .table {
@@ -53,5 +53,5 @@
  }
  .table, td, th {
    border: 1px solid black;
- }
+ } */
  
