@@ -71,7 +71,7 @@ export default function AllNotices(props){
                        
                     <td> {<button type="button" className="btn btn-success mr-2 mb-4" 
                             onClick={() =>Update(item._id)}>Edit</button>}</td>
-                              <td> {<button type="button" className="btn btn-success mr-2 mb-4" 
+                              <td> {<button type="button" className="btn btn-danger" 
                             onClick={() =>Delete(item._id)}>Delete</button>}</td>   
          
                     </tr>  
