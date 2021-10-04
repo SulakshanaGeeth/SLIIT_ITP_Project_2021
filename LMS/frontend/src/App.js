@@ -19,6 +19,8 @@ import Withdraw from './Components/TeacherPayment/Withdraw';
 import PendingPaymets from './Components/TeacherPayment/PendingPaymets';
 import WithdrawHome from './Components/TeacherPayment/WithdrawHome';
 import WithdrawPayment from './Components/TeacherPayment/WithdrawPayment';
+import TeacherDetails from './Components/TeacherPayment/DisplayTeacherDetails';
+import TeacherPaymentReport from './Components/TeacherPayment/GetReport';
 
 //Class Management
 import NewClassRequest from './Components/ClassManagement/addClass'
@@ -29,6 +31,7 @@ import TeacherDashboard from './Components/ClassManagement/teacherDashboard'
 import AddUpdateRequest from './Components/ClassManagement/addUpdateClass'
 import RejectNewClassRequest from './Components/ClassManagement/rejectNewClassRequest'  
 import TeacherNewClassRequest from './Components/ClassManagement/teacherNewClassRequest'
+import ClassDetailsReport from './Components/ClassManagement/classDetailsReport'
 
 
 // Content Management
@@ -39,6 +42,7 @@ import AddLink from './Components/ContentManagement/AddLink';
 import AddTute from './Components/ContentManagement/AddTute';
 import UpdateNotice from './Components/ContentManagement/UpdateNotice';
 import UpdateLink from './Components/ContentManagement/UpdateLink';
+import ContentReport from "./Components/ContentManagement/ContentReport";
 import StudentView from './Components/ContentManagement/StudentView';
 
 //Admin panel
@@ -50,6 +54,7 @@ import Update from './Components/Adminpaneladministration/Update';
 import Delete from './Components/Adminpaneladministration/Delete';
 import Noticeboard from './Components/Adminpaneladministration/Noticeboard';
 import Data from './Components/Adminpaneladministration/Data';
+
 
 //ExamsContentManagement
 import ContentDetails from './Components/ExamContentManagement/ContentDetails';
@@ -63,7 +68,17 @@ import TeacherPageSelection from './Components/ExamContentManagement/TeacherPage
 import ExamStudentView from './Components/ExamContentManagement/ExamStudentView';
 
 
+//PaymentManagement
+import AddRequest from "./Components/PaymentManagement/AddRequest";
+import Addpayment from "./Components/PaymentManagement/Addpayment";
 
+
+
+// Student Foram
+import ForumHome from './Components/StudentForm/ForumHome';
+import AddQuestion from './Components/StudentForm/AddQuestion';
+import EditQuestion from './Components/StudentForm/EditQuestion';
+import ViewQuestion from './Components/StudentForm/ViewQuestion';
 
 const App = () => (
   <BrowserRouter>
@@ -84,6 +99,8 @@ const App = () => (
         <Route path="/pendingPayments" exact component={PendingPaymets} />
         <Route path="/WithdrawHome" exact component={WithdrawHome} />
         <Route path="/WithdrawPayment" exact component={WithdrawPayment} />
+        <Route path="/teacherDetails/:id" exact component={TeacherDetails} />
+        <Route path="/teacherGetReport/:id" exact component={TeacherPaymentReport} />
 
       {/* Class Management */}
       <Route path = "/teacher/save" exact component={NewClassRequest}/>
@@ -94,6 +111,7 @@ const App = () => (
       <Route path = "/teacher/addUpdateRequest/:id" exact component={AddUpdateRequest}/>
       <Route path = "/teacher/rejectNewClass/:id" exact component={RejectNewClassRequest}/>
       <Route path = "/teacher/teacher/newClassRequests" exact component={TeacherNewClassRequest}/>
+      <Route path = "/teacher/classDetailsReport" exact component={ClassDetailsReport}/>
         
 
       {/* Content Mangemnt */}
@@ -104,21 +122,35 @@ const App = () => (
       <Route path = "/content/addtute/:id" exact component = {AddTute} />
       <Route path = "/content/updatenotice/:id" exact component = {UpdateNotice} />
       <Route path = "/content/updatelink/:id" exact component = {UpdateLink} />
+      <Route path = "/content/contentreport/:id" exact component = {ContentReport} />
       {/*<Route path = "/content/studentView/:id" exact component = {StudentView} />*/}
       
 
-      ​​​
+      ​​​{/* Admin panel Mangemnt */}
       <Route path="/notice/add/" exact component={AddNoticeAdmin} />
-    <Route path="/AllNotices" exact component={AllNotices} />
-   
-    <Route path = "/nav"  exact component={Navbar}/>
-    <Route path = "/vali"  exact component={ValiationForm}/>
-  
-      
-    <Route path="/notice/update/:id" exact component={Update}/>
-    <Route path="/notice/delete/:id" exact component={Delete}/>
-    <Route path = "/notieboard"  exact component={Noticeboard}/>
-    <Route path = "/pdf"  exact component={Data}/>
+      <Route path="/AllNotices" exact component={AllNotices} />
+      <Route path = "/nav"  exact component={Navbar}/>
+     <Route path = "/vali"  exact component={ValiationForm}/>
+      <Route path="/notice/update/:id" exact component={Update}/>
+      <Route path="/notice/delete/:id" exact component={Delete}/>
+      <Route path = "/notieboard"  exact component={Noticeboard}/>
+      <Route path = "/pdf"  exact component={Data}/>
+
+
+
+    {/* Payment Mangemnt */}
+    <Route path="/freeCard/add" exact component={AddRequest} />
+    <Route path="/payment" exact component={Addpayment} />
+
+
+
+    
+    {/* Student Form */}
+           <Route path="/forumhome" exact component = {ForumHome}></Route>
+          <Route path="/addquestion" exact component = {AddQuestion}></Route>
+          <Route path="/edit/:id" exact component = {EditQuestion}></Route>
+          <Route path="/ViewQuestion/:id" exact component = {ViewQuestion}></Route>
+
 
     {/* ExamsContentManagement */}
           <Route path="/ExamContent" exact component = {ExamContentHome}></Route>

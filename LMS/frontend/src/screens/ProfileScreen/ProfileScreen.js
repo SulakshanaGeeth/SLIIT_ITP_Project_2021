@@ -7,6 +7,8 @@ import { useHistory } from "react-router";
 import { updateProfile } from "../../actions/userActions";
 import Loading from "../../component/Loading";
 import "./ProfileScreen.css";
+import jsPDF from 'jspdf';
+
 const ProfileScreen = () => {
 
     const [name, setName] = useState("");
@@ -75,10 +77,19 @@ const ProfileScreen = () => {
         dispatch(updateProfile({ name, email, password, pic }));
       };
 
+      function pdfGenerate(){
+        var doc = new jsPDF('landscape','px','a1','false');
+        doc.html(document.querySelector("#UserProfile"),{
+          callback: function(pdf){
+            pdf.save("mypdf.pdf");
+          }
+        });
+      };
+
 
 
     return( <MainScreen title="EDIT PROFILE">
-    <div>
+    <div id="UserProfile">
         <Row className="profileContainer">
             <Col md={6}>
 
@@ -158,6 +169,7 @@ const ProfileScreen = () => {
              <img src={pic} alt={name} className="profilePic" />
              </Col>
         </Row>
+        <button onClick={pdfGenerate}>Download pdf</button>
     </div>
     </MainScreen>
     )

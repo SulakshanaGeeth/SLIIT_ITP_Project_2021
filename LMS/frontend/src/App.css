@@ -28,6 +28,27 @@
   color: #61dafb;
 }
 
+/* class management */
+.blueClasses:hover{
+  color: blue;
+  text-decoration: underline;
+}
+
+.greenClasses:hover{
+  color: green;
+  text-decoration: underline;
+}
+
+.redClasses:hover{
+  color: red;
+  text-decoration: underline;
+}
+
+.textUnderline:hover{
+  color: blue;
+  text-decoration: underline;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,7 +56,8 @@
   to {
     transform: rotate(360deg);
   }
-} */
+
+}
 
 
 
@@ -148,7 +170,7 @@ img {
 }
 
 /* Create Exam Content CSS */
-/* 
+
 cls1 {
   width: 100%;
   padding: 12px 20px;
@@ -186,14 +208,27 @@ label {
 .card {
   margin-left: 10px;
   margin-right: 10px
-} */
+} 
 
 /* Exam Report PDF */
-/* 
+
 #contents {
 
   width: 500px;
   height: 300px;
 
-} */
+} 
 
+
+
+  
+}
+#Notices{
+  width: 595px;
+  height: 842px;
+}
+
+#Content{
+  width: 100%;
+  height: 100%;
+}

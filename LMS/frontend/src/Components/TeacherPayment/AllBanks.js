@@ -30,8 +30,17 @@ export default function AllBanks(props) {
   }
 
   function Delete(id) {
-    console.log(id);
-    props.history.push("/bank/delete/" + id);
+    const confirmBox = window.confirm(
+      "Do want to delete this Bank Details ?"
+    )
+    if (confirmBox === true) {
+      console.log(id);
+      props.history.push("/bank/delete/" + id);
+    }
+    else{
+      props.history.push("/bank/");
+    }
+    
   }
 
   function Addroute(){  
@@ -55,8 +64,8 @@ export default function AllBanks(props) {
                 <td>Bank Name</td>
                 <td>Bank Name</td>
                 <td>Account Holder's Name</td>
-                <td>td1</td>
-                <td>td2</td>
+                <td>Edit Details</td>
+                <td>Delete Details</td>
 
             </tr>
             </thead>  
@@ -70,9 +79,9 @@ export default function AllBanks(props) {
                         <td>{item.Bank_name}</td>
                         <td>{item.Branch_name}</td>
                         <td>{item.Acc_Holder_name}</td>
-                        <td><button type="button" className="btn btn-success mr-2 mb-4" 
+                        <td><button type="button" className="btn btn-outline-success" 
                             onClick={() =>Update(item._id)}>Edit</button></td>
-                        <td><button type="button" className="btn btn-success mr-2 mb-4"
+                        <td><button type="button" className="btn btn-outline-danger"
                         onClick={() =>Delete(item._id)}>Delete</button></td>
         
                     </tr>
@@ -81,8 +90,8 @@ export default function AllBanks(props) {
                 
         </table>
       </div>
-      <div>
-        <button class="bankadd_btn" onClick={() =>props.history.push("/bank/add")}>
+      <div class="col text-center">
+        <button class="bankadd_btn" className="btn btn-outline-success" onClick={() =>props.history.push("/bank/add")}>
           Add New Bank Account</button>
       </div>
     </div>

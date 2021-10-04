@@ -40,7 +40,7 @@ export default function AddNotice(props) {
                     <label for="Textarea1">Notice</label>
                     <br />
 
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Type Notice Here.." onChange={(e => {
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Type Notice Here.." required onChange={(e => {
                         setNotice(e.target.value);
                     })}>
                     </textarea>

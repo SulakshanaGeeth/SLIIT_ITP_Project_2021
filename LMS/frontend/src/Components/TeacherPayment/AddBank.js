@@ -34,7 +34,7 @@ export default function AddBank(props){
 
     return(
     <div className="AddBank">
-        <button className="backbtn" onClick={() => props.history.push("/WithdrawHome")}>
+        <button className="backbtn" onClick={() => props.history.push("/bank/")}>
         Back</button>
       <h1 class="bankdetailsh1">Add Bank Details</h1>
          
@@ -73,7 +73,7 @@ export default function AddBank(props){
                     setholder_name(e.target.value);
                 }} required></input><br/>
             </div>
-
+                    
             <button type="submit" className="selct_bankBtn">Submit</button>
         </form>
     </div>

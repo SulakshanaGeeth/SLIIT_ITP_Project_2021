@@ -38,6 +38,15 @@ const contentRoutes = require("./routes/ExamContentManagement/contents");
 
 
 
+//Payment Management
+const FreecardRouter = require("./routes/PaymentManagement/Freecards");
+const paymentRouter = require("./routes/PaymentManagement/Payments");
+
+//StudentForam
+const questionRoutes = require('./routes/StudentForm/questions');
+
+
+
 
 const app = express();
 dotenv.config();
@@ -61,7 +70,7 @@ app.use("/api/users",userRoutes);
 app.use("/api/notes",noteRoutes);
 
 
-
+//Teacher payment Management
 app.use("/bank",bankRouter);
 app.use("/withdraw",withdrawRouter);
 app.use("/withdrawPayment",withdrawPaymentRouter);
@@ -87,6 +96,15 @@ app.use("/Notice",NoticeRouter);
 //ExamsContentManagement
 app.use(contentRoutes);
 
+
+
+
+//payment Management
+app.use("/Payment",paymentRouter);
+app.use("/freeCard",FreecardRouter);
+
+//StudentForam
+app.use(questionRoutes);
 
 
 

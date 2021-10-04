@@ -94,7 +94,7 @@ export default function Dropdown(props){
 
             <form onSubmit={UpdateData}>
                     <div class="box2" >
-                    <div className="form-group">
+                    <div className="form-group1">
                         <label for="Acc_no" class="lb_Acc_no">Account Number</label>
                         <input type="text" className="Bank_form" id="Acc_no" Value={Acc_no} disabled
                         ></input>
@@ -114,9 +114,9 @@ export default function Dropdown(props){
 
                     </div>
                     </div>
-
-                     <button type="submit" className="selct_bankBtn">Submit</button> 
-
+                    <div class="col text-center">
+                     <button type="submit" className="btn btn-outline-success btn-lg mt-5 mb-5">Submit</button> 
+                     </div>
                 </form>
         
         </div>

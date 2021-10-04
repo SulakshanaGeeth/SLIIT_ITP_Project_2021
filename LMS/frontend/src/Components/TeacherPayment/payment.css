@@ -83,7 +83,7 @@
 /* WithdrawHome page */
 .Withdrawhomeh1{
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 6.29vh;
   
 }
 .wdh1, .wdh2, .wdh3{
@@ -136,32 +136,32 @@
   margin-bottom: 10px;
 }
 .form-group2{
-  font-size: 25px;
+  font-size: 3.5vh;
 }
 
 .lb_Acc_no2{
-  margin-left: 30vw;
+  margin-left: 32vw;
   margin-bottom: 2vh;
 }
 #Acc_no2{
-  margin-left: 7vw;
+  margin-left: 7.2vw;
 }
 .lb_bank_name2{
-  margin-left: 30vw;
+  margin-left: 32vw;
   margin-bottom: 2vh;
 }
 #bank_name2{
   margin-left: 9.4vw;
 }
 .lb_branch_name2{
-  margin-left: 30vw;
+  margin-left: 32vw;
   margin-bottom: 2vh;
 }
 #branch_name2{
   margin-left: 8vw;
 }
 .lb_holder_name2{
-  margin-left: 30vw;
+  margin-left: 32vw;
 }
 #holder_name2{
   margin-left: 3vw;
@@ -180,56 +180,58 @@
 
 /* select bank page */
 #dropdown{
-  font-size: 25px;
-  margin-top: 50px;
-  margin-left: 450px;
+  font-size: 3.46vh;
+  margin-top: 6.87vh;
+  margin-left: 37vw;
 }
 
 .form-group1{
-  font-size: 25px;
+
+  font-size: 3.4vh;
+
 }
 
 .lb_Acc_no{
-  margin-left: 240px;
-  margin-bottom: 40px;
+  margin-left: 10.65vw;
+  margin-bottom: 5.5vh;
 }
 
 #Acc_no{
-  margin-left: 20px;
+  margin-left: 2.23vw;
 }
 
 .lb_bank_name{
-  margin-left: 40px;
+  margin-left: 4.46vw;
 }
 
 #bank_name{
-  margin-left: 109px;
+  margin-left: 7.09vw;
 }
 
 .lb_branch_name{
-  margin-left: 240px;
+  margin-left: 10.65vw;
 }
 #branch_name{
-  margin-left: 60px;
+  margin-left: 4.3vw;
 }
 
 .lb_holder_name{
-  margin-left: 40px;
+  margin-left: 4.46vw;
 }
 
 #holder_name{
-  margin-left: 10px;
+  margin-left: 1.1vw;
 }
 
 .selct_bankBtn{
-  padding: 5px;
-  margin-top: 30px;
-  margin-left: 700px;
-  font-size: 20px;
+  padding: 0.68vh;
+  margin-top: 8vh;
+  margin-left: 46vw;
+  font-size: 2.75vh;
   background-color: chartreuse;
-  border-radius: 5px;
+  border-radius: 0.68vh;
   cursor:pointer;
-  margin-bottom: 150px;
+  margin-bottom: 20.63vh;
 }
 
 
@@ -248,9 +250,9 @@
   margin-left:15vw;
 }
 .bankadd_btn{
-  margin-left: 620px;
-  margin-bottom: 150px;
-  font-size: 25px;
+  margin-left: 39vw;
+  margin-bottom: 16.74vw;
+  font-size: 3.34vh;
 }
 .bankadd_btn:hover{
   background-color: #4CAF50; /* Green */
@@ -258,9 +260,9 @@
 }
 .bankdetailsh1{
   
-  margin-left: 580px;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-left: 41vw;
+  margin-top: 3vh;
+  margin-bottom: 4vh;
 }
 .bank-table{
   border-collapse: collapse;
@@ -301,7 +303,7 @@
 
 /* Withdraw page */
 .displyAmount{
-  margin-left: 500px;
+  margin-left: 37vw;
   margin-bottom: 10px;
 }
 .backbtn2{
@@ -318,7 +320,9 @@
 .paywitdh1{
 
   display: inline-block;
-  margin-left: 220px;
+  margin-left: 16vw;
+  font-family: 'Times New Roman', serif;
+  
 }
 .withNextbtn{
   font-size: 30px;
@@ -333,12 +337,12 @@
 }
 .withdraw-table{
   border-collapse: collapse;
-  margin: 25px 0;
-  font-size: 1.3em;
+  margin: 1.6vw 0;
+  font-size: 2.4vh;
   min-width: 80%;
-  border-radius: 5px 5px 0 0;
+  border-radius: 0.3vw 0.3vw 0 0;
   overflow: hidden;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 1.3vw rgba(0, 0, 0, 0.15);
 }
 .withdraw-table thead tr {
   background-color: turquoise; 
@@ -353,4 +357,119 @@
 .withdraw-table tbody tr{
   border-bottom: 1px solid chartreuse;
   text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+/* Pending Payment page */
+.paywitdh2{
+  display: inline-block;
+  margin-left: 13vw;
+  font-family: 'Times New Roman', serif;
+  font-size: 5vh;
+}
+.teacherSearchLable{
+  margin-left: 6.5vw;
+  margin-right: 1.3vw;
+  font-size: 3.5vh;
+  font-family: 'Times New Roman', serif;
+}
+.teacherSearch{
+  font-size: 1vw;
+  font-family: 'Times New Roman', serif;
+}
+
+
+
+
+
+
+
+
+
+/* Display Teacher Details page */
+
+.DisplayDetails p{
+  text-align: center;
+}
+
+.Displaywitdh1{
+
+  display: inline-block;
+  margin-left: 170px;
+  font-family: 'Times New Roman', serif;
+}
+
+.dtBoxMain{
+  background-color: white;
+  width: 700px;
+  margin: 40px auto;
+  font-size: large;
+}
+.dtBoxTeacher{
+  background-color: turquoise;
+  width: 700px;
+  margin: 20px auto;
+  border-style: ridge;
+  border-color: black;
+  padding-top: 10px;
+}
+.dtBoxBank{
+  background-color: turquoise;
+  width: 700px;
+  margin: 20px auto;
+  border-style: ridge;
+  border-color: black;
+  padding-top: 10px;
+}
+.dtBoxTable{
+  background-color: turquoise;
+  width: 700px;
+  margin: 20px auto;
+  padding-bottom: 10px;
+  border-style: ridge;
+  border-color: black;
+}
+.dtBoxAmount{
+  background-color: turquoise;
+  width: 700px;
+  margin: 20px auto;
+  border-style: ridge;
+  border-color: black;
+  padding-top: 10px;
+}
+.dtBoxButton{
+  /* background-color: rgb(231, 12, 231); */
+  width: 700px;
+  
+}
+.dtBoxTable table, .dtBoxTable th,.dtBoxTable td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  margin: 20px auto;
+  padding: 10px;
+  text-align: center;
+  width: 650px; 
+}
+.dtMarkTrans{
+  padding: 5px;
+  margin-left: 280px;
+}
+.dtBoxTable p {
+  padding-top: 10px;
+}
+
+
+
+
+/* Get Report */
+.pdfBtnPayment{
+  margin-left: 280px;
 }
