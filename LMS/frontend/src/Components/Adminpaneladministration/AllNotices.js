@@ -42,13 +42,13 @@ export default function AllNotices(props){
     }
 
      return(
-     <div className="container">
-          <div class="content">
+      <div className="container"  style={{paddingLeft:15,paddingRight:20,alignItems:"center",justifyContent:'center',justifyContent:'center'}}>
+          
               
 
-         <h1 style={{color:"red",display: 'flex',  justifyContent:'center', alignItems:'center', height: '100vh'}}  > All Notices</h1>
+         <h1 style={{color:"red",display: 'flex',  justifyContent:'center', alignItems:'center', height: '5vh'}}  > All Notices</h1>
          <div className="box1">
-          <table className="withdraw-table">
+          <table className="withdraw-table" >
             <thead>
               <tr>
                                 
@@ -81,7 +81,7 @@ export default function AllNotices(props){
            
      </div>
      </div>
-     </div>
+     
      
 
 

@@ -45,16 +45,16 @@ export default function GetReport(props){
     };
 
      return(
-     <div className="container" id="Notices">
-           <div class="content">
+     <div className="container" id="Notices" style={{paddingLeft:15,paddingRight:20,alignItems:"center",justifyContent:'center',justifyContent:'center'}}>
+     
           
          
               
          
 
-         <h1 style={{color:"red",display: 'flex',  justifyContent:'center', alignItems:'center', height: '100vh'}}  > All Notices</h1>
+         <h1 style={{color:"red",display: 'flex',  justifyContent:'center', alignItems:'center',minHeight:"10vh"}}  > All Notices</h1>
          <div className="box1">
-          <table className="withdraw-table">
+          <table className="withdraw-table" style={{height:500}}>
             <thead>
               <tr>
                               
@@ -85,10 +85,13 @@ export default function GetReport(props){
                  </table>
                  <button type="button" className="btn btn-danger" 
                   onClick={ pdfGenerate}>Download pdf</button>
+
+<button className="btn btn-primary" onClick={() => props.history.push("/nav")}>
+Back</button>
            
      </div>
      </div>
-     </div>
+    
      
     
      
