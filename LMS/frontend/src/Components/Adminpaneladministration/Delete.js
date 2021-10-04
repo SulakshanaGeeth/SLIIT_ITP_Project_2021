@@ -21,7 +21,9 @@ export default function Delete (props){
             <div class="content">
             
             <h1>Notice delete Page</h1>
-                
+            <button className="btn btn-primary" onClick={() => props.history.push("/AllNotices")}>
+Back</button>
+            
          </div>
          </div>
     )

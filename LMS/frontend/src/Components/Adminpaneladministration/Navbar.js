@@ -10,9 +10,9 @@ function Navbar(){
    const [sidebar,setSidebar] = useState(false)
    const  showSidebar = () => setSidebar(!sidebar)
    return(
-      <>
+      <div style={{ minHeight:"83vh"}}>
       <IconContext.Provider value={{color: 'red'}}>
-     <div className="navbar">
+     <div className="navbar" >
          <Link to="#" className='menu-bars'></Link>
          <FaIcons.FaBars onClick={showSidebar}/>
      .navbar
@@ -41,8 +41,8 @@ function Navbar(){
      </ul>
      </nav>
      </IconContext.Provider>
-   
-    </>
+     <p  style={{color:"red",display: 'flex',  justifyContent:'center', alignItems:'center', height: '15vh', fontSize:"100px"}}>Admin panel</p>
+    </div>
 
 
    );
