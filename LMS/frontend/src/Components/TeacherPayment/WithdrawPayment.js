@@ -5,6 +5,7 @@ import "./payment.css";
 export default function Withdraw(props) {
 
 var tid = localStorage.getItem("teacherID");
+var state = "";
   
 const [details, setDetails] = useState([]);
 
@@ -48,13 +49,32 @@ console.log(details);
               <td>{item.Request_date}</td>
               <td>{item.Withdraw_amout}</td>
               <td>{item.State}</td>
+
+
+              <p hidden>{(state = item.State)}</p>
+
+
+              {(() => {
+          if (state == "pending") {
+            return (
               <td>
-                <button className="" onClick={() => props.history.push("/teacherGetReport/"+tid)}>
+                <button className="btn btn-outline-success" onClick={() => props.history.push("/teacherGetReport/"+tid)} disabled>
                   Get Report
                 </button>
               </td>
-              
-              
+            );
+          } else {
+            return (
+              <td>
+                <button className="btn btn-outline-success" onClick={() => props.history.push("/teacherGetReport/"+tid)}>
+                  Get Report
+                </button>
+              </td>
+            );
+          }
+        })()}
+            
+
             </tr>
            ))}
             

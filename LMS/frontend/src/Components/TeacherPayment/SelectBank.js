@@ -114,9 +114,9 @@ export default function Dropdown(props){
 
                     </div>
                     </div>
-
-                     <button type="submit" className="selct_bankBtn">Submit</button> 
-
+                    <div class="col text-center">
+                     <button type="submit" className="btn btn-outline-success btn-lg mt-5 mb-5">Submit</button> 
+                     </div>
                 </form>
         
         </div>
