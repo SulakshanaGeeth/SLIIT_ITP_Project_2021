@@ -31,6 +31,12 @@ const tuteRouter = require("./routes/ContentManagement/tute.js");
 //Admin panel administration
 const NoticeRouter =  require("./routes/AdminpanelAdministration/Notices");
 
+//ExamsContentManagement
+const contentRoutes = require("./routes/ExamContentManagement/contents");
+// const content = require("./models/ExamsContentManagement/content");
+
+
+
 
 
 const app = express();
@@ -77,6 +83,11 @@ app.use("/tute", tuteRouter);
 
 //admin panel
 app.use("/Notice",NoticeRouter);
+
+//ExamsContentManagement
+app.use(contentRoutes);
+
+
 
 
 app.use(notFound);

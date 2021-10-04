@@ -51,6 +51,17 @@ import Delete from './Components/Adminpaneladministration/Delete';
 import Noticeboard from './Components/Adminpaneladministration/Noticeboard';
 import Data from './Components/Adminpaneladministration/Data';
 
+//ExamsContentManagement
+import ContentDetails from './Components/ExamContentManagement/ContentDetails';
+import CreateContent from './Components/ExamContentManagement/CreateContent';
+import EditContent from './Components/ExamContentManagement/EditContent';
+import ExamHeader from './Components/ExamContentManagement/ExamHeader';
+import ExamContentHome from './Components/ExamContentManagement/ExamContentHome';
+import GovExamHome from './Components/ExamContentManagement/GovExamHome';
+import ExamPDFReport from './Components/ExamContentManagement/ExamPDFReport';
+import TeacherPageSelection from './Components/ExamContentManagement/TeacherPageSelection';
+import ExamStudentView from './Components/ExamContentManagement/ExamStudentView';
+
 
 
 
@@ -108,6 +119,20 @@ const App = () => (
     <Route path="/notice/delete/:id" exact component={Delete}/>
     <Route path = "/notieboard"  exact component={Noticeboard}/>
     <Route path = "/pdf"  exact component={Data}/>
+
+    {/* ExamsContentManagement */}
+          <Route path="/ExamContent" exact component = {ExamContentHome}></Route>
+          <Route path="/ExamAdd" exact component = {CreateContent}></Route>
+          <Route path="/ExamEdit/:id" exact component = {EditContent}></Route>
+          <Route path="/ExamContentDetails/:id" exact component = {ContentDetails}></Route>
+          <Route path="/GovExamHome" exact component = {GovExamHome}></Route>
+          <Route path="/ExamHeader" exact component = {ExamHeader}></Route>
+          <Route path="/ExamReport" exact component = {ExamPDFReport}></Route>
+          <Route path="/ClassExamsPage" exact component = {TeacherPageSelection}></Route>
+          <Route path="/ExamStudentView" exact component = {ExamStudentView}></Route>
+
+          {/* <Route path="/content/:id" exact component = {ExamHeader}></Route> */}
+
 
     </main>
     <Footer/>

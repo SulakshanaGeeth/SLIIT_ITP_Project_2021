@@ -51,8 +51,11 @@ const dispatch = useDispatch();
         <Nav.Link href="#home">Home</Nav.Link>
         <Nav.Link>
          <Link to="/mynotes">My Notes</Link> 
-          
-          
+  
+          </Nav.Link>
+          <Nav.Link>
+          <Link to="/GovExamHome">Exams</Link> 
+
           </Nav.Link>
         <Nav.Link href="#link">My Classes</Nav.Link>
         <NavDropdown title={userInfo?.name} id="basic-nav-dropdown">
