@@ -5,10 +5,6 @@ export default class Requests extends Component{
     constructor(props){
         super(props);
 
-        // localStorage.setItem('teacherID','61238d564e18353b383e449a');
-        
-        
-
         this.state={
             newclassrequests:[]
         };
@@ -44,51 +40,45 @@ export default class Requests extends Component{
         return(
             <div className ="container"><br></br>
 
-                <div style={{paddingLeft:250}}>
-                <br />
+                <div style={{paddingLeft:280}}>
+                    <br />
 
-                    <a class="btn btn-dark" href="/teacher/classes" role="button">Classes</a>&nbsp; 
-                    <a class="btn btn-dark" href="/teacher/save" role="button">Add New Class</a>&nbsp; 
-                    <a class="btn btn-dark" href="/teacher/teacher/newClassRequests" role="button">Class Request</a>&nbsp; 
-                    <a class="btn btn-dark" href="#" role="button">Payment</a>&nbsp; 
-                    <a class="btn btn-dark" href="#" role="button">Class Details</a>
+                    <a className="btn btn-dark" href="/teacher/classes" role="button">Classes</a>&nbsp; 
+                    <a className="btn btn-dark" href="/teacher/save" role="button">Add New Class</a>&nbsp; 
+                    <a className="btn btn-dark" href="/teacher/teacher/newClassRequests" role="button">Class Request</a>&nbsp; 
+                    <a className="btn btn-dark" href="/WithdrawHome" role="button">Payment</a>&nbsp; 
+                    <a className="btn btn-dark" href="/teacher/classDetailsReport" role="button">Class Details</a>
 
-                <br /><br />
-                
+                    <br /><br />
                 </div>
                 <br /><br />
 
                 <h2>New Class Requests</h2><br></br>
-                <table class="table">
-                    <thead class="thead-dark">
+                <table className="table">
+                    <thead className="thead-dark">
                         <tr>
-                        <th scope="col">No</th>
-                        <th scope="col">Class Name</th>
-                        <th scope="col" style = {{width: 250}}>Status</th>
-                        <th scope="col" style={{textAlign: 'center'}}>Action</th>
+                            <th scope="col">No</th>
+                            <th scope="col">Class Name</th>
+                            <th scope="col" style = {{width: 250}}>Status</th>
+                            <th scope="col" style={{textAlign: 'center'}}>Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         {this.state.newclassrequests.map((newclassrequests,index) =>(
                             <tr>
                                 <th scope="row">{index+1}</th>
-                                <td>
-                                   
-                                    {newclassrequests.class_name}
-                                    
-                                </td>
+                                <td>{newclassrequests.class_name}</td>
                                 <td>{newclassrequests.status}</td>
                                 <td style={{textAlign: 'center'}}>
-                                    <a href = {`/teacher/post/${newclassrequests._id}`} style={{paddingLeft:0}}>View </a>
-                                    <a href = "#" onClick ={() => this.onDelete(newclassrequests._id)} style={{paddingLeft:18}}>Remove </a>
-                                    
+                                    <a href = {`/teacher/post/${newclassrequests._id}`} style={{paddingLeft:0}} className="blueClasses">View </a>
+                                    <a href = "#" onClick ={() => this.onDelete(newclassrequests._id)} style={{paddingLeft:18}} className="redClasses">Remove </a>
                                 </td>
                             </tr>
                         ))}
-                        </tbody>
-                        </table>
-            
-                        <br /><br /><br />
+
+                    </tbody>
+                </table>
+                <br /><br /><br />
             </div>
         )
     }

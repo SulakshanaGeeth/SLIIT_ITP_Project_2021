@@ -50,11 +50,10 @@ export default class NewClassRequestDetails extends Component{
         console.log(data)
 
         axios.put(`http://localhost:3000/classes/update/${id}`,data).then((res) =>{
-        if(res.data.success){
-            alert("Class updated")
-         }
-       })
-
+            if(res.data.success){
+                alert("Class updated")
+            }
+        })
     }
 
     componentDidMount(){
@@ -85,90 +84,94 @@ export default class NewClassRequestDetails extends Component{
         return(
             <div className ="container" style={{paddingLeft:200}}><br></br>
 
-            <h2>Update Class Details</h2><br></br>
-            
-            <form>
-
-                <div class="form-group">
-                    <label for="className">Class Name</label>
-                    <input type="text" class="form-control" name = "class_name" id="className"  placeholder="Enter class name" required
-                    value={this.state.class_name}
-                    onChange={this.handleInputChange} style={{width:700}}></input>
-                </div>
-
-                <div class="form-group">
-                    <label for="className">Subject</label>
-                    <input type="text" class="form-control" name = "subject" id="subject"  placeholder="Enter subject" required
-                    value={this.state.subject}
-                    onChange={this.handleInputChange} style={{width:700}}></input>
-                </div>
-
-                <div class="form-group">
-                    <label for="grade">Grade</label>
-                    <input type="number" class="form-control" name ="grade" id="grade"  placeholder="Enter class grade" required
-                    value={this.state.grade}
-                    onChange={this.handleInputChange} style={{width:700}}></input>
-                </div>
-
-                <div class="form-group">
-                    <label for="type">Type</label>
-                    <input type="text" class="form-control" name ="type" id="type"  placeholder="Enter class type" required
-                    value={this.state.type}
-                    onChange={this.handleInputChange} style={{width:700}}></input>
-                </div>
-
-                <div class="form-group">
-                    <label for="fee">Fee</label>
-                    <input type="number" class="form-control" name ="fee" id="fee"  placeholder="Enter class fee" required
-                    value={this.state.fee}
-                    onChange={this.handleInputChange} style={{width:700}}></input>
-                </div>
-
-                <div class="form-group">
-                    <div><label class="mr-sm-2" for="inlineFormCustomSelect">Day</label></div>
-                    <select class="custom-select mr-sm-2" name ="day" id="inlineFormCustomSelect" required
-                    value={this.state.day}
-                    onChange={this.handleInputChange} style={{width:700}}>
-                        <option selected>Choose...</option>
-                        <option value="Monday">Monday</option>
-                        <option value="Tuesday">Tuesday</option>
-                        <option value="Wensday">Wensday</option>
-                        <option value="Thursday">Thursday</option>
-                        <option value="Friday">Friday</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="startTime">Start Time</label>
-                    <input type="text" class="form-control" name ="start_time" id="startTime"  placeholder="Enter class start time ex - 3:30 P.M." required
-                    value={this.state.start_time}
-                    onChange={this.handleInputChange} style={{width:700}}></input>
-                </div>
-
-                <div class="form-group">
-                    <label for="endTime">End Time</label>
-                    <input type="text" class="form-control" name ="end_time" id="endTime"  placeholder="Enter class end time ex - 5:30 P.M." required
-                    value={this.state.end_time}
-                    onChange={this.handleInputChange} style={{width:700}}></input>
-                </div>
-
-                <div class="form-group">
-                    <input type="hidden" class="form-control" name ="status" id="status"  placeholder=""
-                    value={this.state.status}
-                    onChange={this.handleInputChange} ></input>
-                </div>
-
-                {/*<div class="form-group">
-                    <input type="hidden" class="form-control" name ="no_of_students" id="no_of_students"  placeholder=""
-                    value={this.state.no_of_students}
-                    onChange={this.handleInputChange}></input>
-                </div>*/}
-
+                <h2>Update Class Details</h2><br></br>
                 
-        
-            <div><button type="submit" class="btn btn-primary" onClick={this.onsubmit} style={{marginTop:5, marginBottom:30}}>Update Class</button></div>
-        </form>
-        </div>
+                <form>
+
+                    <div className="form-group">
+                        <label for="className">Class Name</label>
+                        <input type="text" className="form-control" name = "class_name" id="className"  placeholder="Enter class name" required
+                        value={this.state.class_name}
+                        onChange={this.handleInputChange} style={{width:700}}></input>
+                    </div>
+
+                    <div className="form-group">
+                        <label for="className">Subject</label>
+                        <input type="text" className="form-control" name = "subject" id="subject"  placeholder="Enter subject" required
+                        value={this.state.subject}
+                        onChange={this.handleInputChange} style={{width:700}}></input>
+                    </div>
+
+                    <div className="form-group">
+                        <label for="grade">Grade</label>
+                        <input type="number" className="form-control" name ="grade" id="grade"  placeholder="Enter class grade" required
+                        value={this.state.grade}
+                        onChange={this.handleInputChange} style={{width:700}}></input>
+                    </div>
+
+                    <div className="form-group">
+                        <label for="type">Type</label>
+                        <input type="text" className="form-control" name ="type" id="type"  placeholder="Enter class type" required
+                        value={this.state.type}
+                        onChange={this.handleInputChange} style={{width:700}}></input>
+                    </div>
+
+                    <div cclassNamelass="form-group">
+                        <label for="fee">Fee</label>
+                        <input type="number" className="form-control" name ="fee" id="fee"  placeholder="Enter class fee" required
+                        value={this.state.fee}
+                        onChange={this.handleInputChange} style={{width:700}}></input>
+                    </div>
+
+                    <div className="form-group">
+                        <div><label className="mr-sm-2" for="inlineFormCustomSelect">Day</label></div>
+                        <select className="custom-select mr-sm-2" name ="day" id="inlineFormCustomSelect" required
+                        value={this.state.day}
+                        onChange={this.handleInputChange} style={{width:700}}>
+                            <option selected>Choose...</option>
+                            <option value="Monday">Monday</option>
+                            <option value="Tuesday">Tuesday</option>
+                            <option value="Wensday">Wensday</option>
+                            <option value="Thursday">Thursday</option>
+                            <option value="Friday">Friday</option>
+                        </select>
+                    </div>
+
+                    <div className="form-group">
+                        <label for="startTime">Start Time</label>
+                        <input type="text" className="form-control" name ="start_time" id="startTime"  placeholder="Enter class start time ex - 3:30 P.M." required
+                        value={this.state.start_time}
+                        onChange={this.handleInputChange} style={{width:700}}></input>
+                    </div>
+
+                    <div className="form-group">
+                        <label for="endTime">End Time</label>
+                        <input type="text" className="form-control" name ="end_time" id="endTime"  placeholder="Enter class end time ex - 5:30 P.M." required
+                        value={this.state.end_time}
+                        onChange={this.handleInputChange} style={{width:700}}></input>
+                    </div>
+
+                    <div className="form-group">
+                        <input type="hidden" className="form-control" name ="status" id="status"  placeholder=""
+                        value={this.state.status}
+                        onChange={this.handleInputChange} ></input>
+                    </div>
+
+                    {/*<div className="form-group">
+                        <input type="hidden" className="form-control" name ="no_of_students" id="no_of_students"  placeholder=""
+                        value={this.state.no_of_students}
+                        onChange={this.handleInputChange}></input>
+                    </div>*/}
+
+                    
+            
+                <div>
+                    <button type="submit" className="btn btn-primary" onClick={this.onsubmit} style={{marginTop:5, marginBottom:30}}>Update Class</button>
+                </div>
+
+                </form>
+
+            </div>
         )
     }
 
