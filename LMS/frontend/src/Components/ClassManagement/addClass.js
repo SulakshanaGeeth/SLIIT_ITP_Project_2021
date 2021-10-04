@@ -165,11 +165,25 @@ export default class Addclass extends Component{
 
     render(){
         return(
-            <div className ="container" style={{paddingLeft:200}}><br></br>
+            <div className ="container" style={{paddingLeft:200, minHeight:"80vh"}}><br></br>
 
-                <h2>Add New Class</h2><br></br>
+                <div style={{paddingLeft:95}}>
+                    <br />
 
-                <form>
+                    <a className="btn btn-dark" href="/teacher/classes" role="button">Classes</a>&nbsp; 
+                    <a className="btn btn-dark" href="/teacher/save" role="button">Add New Class</a>&nbsp; 
+                    <a className="btn btn-dark" href="/teacher/teacher/newClassRequests" role="button">Class Request</a>&nbsp; 
+                    <a className="btn btn-dark" href="/WithdrawHome" role="button">Payment</a>&nbsp; 
+                    <a className="btn btn-dark" href="/teacher/classDetailsReport" role="button">Class Details</a>
+
+                    <br />
+                
+                </div>
+                <br /><br />
+
+                <h2 style={{paddingLeft:260}}>Add New Class</h2><br></br>
+
+                <form style={{paddingLeft:520}}>
 
                     <div className="form-group">
                         <label for="className">Class Name</label>
@@ -280,7 +294,7 @@ export default class Addclass extends Component{
                         onChange={this.handleInputChange}></input>
                     </div>
 
-                <button type="submit" className="btn btn-primary" onClick={this.onsubmit} style={{marginTop:5, marginBottom:30}}>Send Request</button>
+                <button type="submit" className="btn btn-primary" onClick={this.onsubmit} style={{marginTop:10, marginBottom:30}}>Send Request</button>
                 </form>
             </div>
         )

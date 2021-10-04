@@ -81,6 +81,8 @@ export default function Update (props){
         </div>
         
         <button type="submit" class="btn btn-primary">Submit</button>
+        <button className="btn btn-primary" onClick={() => props.history.push("/AllNotices")}>
+Back</button>
       </form>
         </div>
 

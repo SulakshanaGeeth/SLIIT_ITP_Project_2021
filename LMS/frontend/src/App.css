@@ -61,8 +61,8 @@
 
 
 
-/* ExamContentManagement */
 
+/* ExamContentManagement */
 
 
 
@@ -208,19 +208,9 @@ label {
 
 /* Exam Report PDF */
 
-#contents {
-
-  width: 500px;
-  height: 300px;
-
-} 
-
-
-
-  
 
 #Notices{
-  width: 595px;
+  width: 6000px;
   height: 842px;
 }
 

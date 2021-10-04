@@ -8,7 +8,7 @@ export default class ExamStudentView extends Component {
     render(){
 
         return(
-            <div> 
+            <div style={{minHeight: "80vh"}}> 
                 <img src ="/images/stud.png" alt=""/>
                 <center>
                 
@@ -21,7 +21,7 @@ export default class ExamStudentView extends Component {
                     <center>
                     <br></br>
                     <br></br>
-                    <a href="/GovExamHome" class="exambutton2" role="button" >Government Exams</a>
+                    <a href="/ExamSelectionPage" class="exambutton2" role="button" >Government Exams</a>
                     <br></br>
                     <br></br>
                     <a href="/teacher/classes" class="exambutton2" role="button " >Classes</a>
@@ -33,7 +33,7 @@ export default class ExamStudentView extends Component {
                     <a href="/notieboard"  class="exambutton2" role="button" >Notice Board</a>
                     <br></br>
                     <br></br>
-                    <a href="#"  class="exambutton2" role="button" >Special Requests</a>
+                    <a href="/freeCard/add"  class="exambutton2" role="button" >Special Requests</a>
                     <br></br>
                     <br></br>   
 

@@ -30,8 +30,11 @@ export default function ContentReport(props) {
    function generatePDF() {
         var doc = new jsPDF("|", "mm", [1120, 900]);
         //var doc = new jsPDF('protrait','px','a4','false');
+        //var doc = new jsPDF('landscape','px',[750,700],false);
         doc.html(document.querySelector("#Content"), {
             callback: function(pdf){
+                var pageCount = doc.internal.getNumberOfPages(1);
+                pdf.deletePage(pageCount);
                 pdf.save("ContentReport.pdf");
             }
         });
@@ -39,7 +42,7 @@ export default function ContentReport(props) {
 
 
     return (
-        <div>
+        <div style={{minHeight: "80vh"}}>
             <div class="form-group" className="container">
             <div id = "Content" style={{paddingLeft:25}}>
                 <br />
@@ -50,7 +53,7 @@ export default function ContentReport(props) {
                     <thead class="thead-dark">
                         <tr>
                             <th scope="col" style={{width:150}}>No.</th>
-                            <th scope="col" style={{width:300}}>Document Name</th>
+                            <th scope="col" style={{width:220}}>Document Name</th>
                             <th scope="col">Drive Link</th>
                         </tr>
                     </thead>
