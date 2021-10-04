@@ -64,11 +64,11 @@
 /* ExamContentManagement */
 
 
-img {
+/* img {
     width: 1705px;
     margin: auto;
-    /* border: 3px solid #73AD21; */
-}
+    border: 3px solid #73AD21;
+} */
 
 
 /* Basic styles */
@@ -212,16 +212,12 @@ label {
 
 /* Exam Report PDF */
 
-#contents {
+/* #contents {
 
   width: 500px;
   height: 300px;
 
-} 
-
-
-
-  
+}  */
 
 #Notices{
   width: 595px;

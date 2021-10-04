@@ -210,7 +210,7 @@ export default class CreateContent extends Component {
       <div class="cls1">
     <label for="formGroupExampleInput4">Reference Link</label>
     <input style={{width:700}} type="text" class="form-control" id="formGroupExampleInput5" placeholder="" value={this.state.ReferLink} name="ReferLink" onChange= {this.handleInputChange}/>
-      </div><div style={{fontSize:12, color:"red"}}>{this.state.ReferLink}</div>
+      </div><div style={{fontSize:12, color:"red"}}>{this.state.RefLinkError}</div>
               
       <div class="cls1">
         <br></br>

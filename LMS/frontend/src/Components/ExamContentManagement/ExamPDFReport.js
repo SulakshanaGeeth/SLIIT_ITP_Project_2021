@@ -68,7 +68,7 @@ class ExamPDFReport extends React.Component {
 
 render(){
     return(
-      <div>
+      <div style={{minHeight: "80vh"}}>
 <center>
 <h1>Exam Content PDF Report</h1>
 </center>
