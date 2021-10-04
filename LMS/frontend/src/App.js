@@ -66,12 +66,16 @@ import GovExamHome from './Components/ExamContentManagement/GovExamHome';
 import ExamPDFReport from './Components/ExamContentManagement/ExamPDFReport';
 import TeacherPageSelection from './Components/ExamContentManagement/TeacherPageSelection';
 import ExamStudentView from './Components/ExamContentManagement/ExamStudentView';
+import ExamSelectionPage from './Components/ExamContentManagement/ExamSelectionPage';
+import SLAS from './Components/ExamContentManagement/SLAS';
+import SLEAS from './Components/ExamContentManagement/SLEAS';
+
 
 
 //PaymentManagement
 import AddRequest from "./Components/PaymentManagement/AddRequest";
 import Addpayment from "./Components/PaymentManagement/Addpayment";
-
+import AddPayment2 from "./Components/PaymentManagement/AddPayment2";
 
 
 // Student Foram
@@ -79,6 +83,7 @@ import ForumHome from './Components/StudentForm/ForumHome';
 import AddQuestion from './Components/StudentForm/AddQuestion';
 import EditQuestion from './Components/StudentForm/EditQuestion';
 import ViewQuestion from './Components/StudentForm/ViewQuestion';
+
 
 const App = () => (
   <BrowserRouter>
@@ -141,6 +146,7 @@ const App = () => (
     {/* Payment Mangemnt */}
     <Route path="/freeCard/add" exact component={AddRequest} />
     <Route path="/payment" exact component={Addpayment} />
+    <Route path="/payment2" exact component={AddPayment2} />
 
 
 
@@ -162,6 +168,9 @@ const App = () => (
           <Route path="/ExamReport" exact component = {ExamPDFReport}></Route>
           <Route path="/ClassExamsPage" exact component = {TeacherPageSelection}></Route>
           <Route path="/ExamStudentView" exact component = {ExamStudentView}></Route>
+          <Route path="/ExamSelectionPage" exact component = {ExamSelectionPage}></Route>
+          <Route path="/SLAS" exact component = {SLAS}></Route>
+          <Route path="/SLEAS" exact component = {SLEAS}></Route>
 
           {/* <Route path="/content/:id" exact component = {ExamHeader}></Route> */}
 

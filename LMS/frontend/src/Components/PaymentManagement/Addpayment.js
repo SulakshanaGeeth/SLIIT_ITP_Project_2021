@@ -26,20 +26,26 @@ axios.post("http://localhost:3000/Payment/add",newPayment).then(()=>{
 })
 
 
+
+
     }
 
 
     return(
-        <div className="container">
+        <div style={{marginLeft:10}} style={{minHeight: "80vh"}} >
+            
+        <div  className="container">
 <div className="padding" >
     <form onSubmit={sendData}>
               
     <div className="form-group" classNameName="container"  >
             <br />
-            <div align="center" >
+            <center>
             <h3>PAYMENT</h3><br />
+            </center>
             </div>
-            </div>
+    
+            
            
     <div className="row" >
         <div className="col-sm-6">
@@ -119,6 +125,7 @@ axios.post("http://localhost:3000/Payment/add",newPayment).then(()=>{
       </div>
   </form>
   </div>
+</div>
 </div>
 
 

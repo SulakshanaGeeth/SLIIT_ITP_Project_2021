@@ -56,7 +56,7 @@ const dispatch = useDispatch();
   
           </Nav.Link>
           <Nav.Link>
-          <Link to="/GovExamHome">Exams</Link> 
+          <Link to="/ExamSelectionPage">Exams</Link> 
 
           </Nav.Link>
         <Nav.Link href="/teacher/classes">Classes</Nav.Link>

@@ -8,7 +8,7 @@ export default class GovExamHome extends Component {
   render(){
 
     return (
-        <div >
+        <div  style={{minHeight: "80vh"}}>
              
              <img src ="/images/exhome3.png" alt=""/>
             
@@ -30,7 +30,7 @@ export default class GovExamHome extends Component {
                     <a href="/ExamContent" class="exambutton" role="button " >View Recenlty Added Content</a>
                     <br></br>
                     <br></br>
-                    <a href="#" class="exambutton" role="button" >Visit Government Examination Page</a>
+                    <a href="/ExamSelectionPage" class="exambutton" role="button" >Visit Government Examination Page</a>
                     <br></br>
                     <br></br>
                     <a href="/ExamReport"  class="exambutton" role="button" >Generate a Report</a>
