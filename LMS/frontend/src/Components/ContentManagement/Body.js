@@ -129,6 +129,25 @@ export default function Body(props) {
         })
     }
 
+//search
+    function filterData(tute, SearchQry){
+        const result = tute.filter((tute)=>
+        tute.name.toLowerCase().includes(SearchQry)||
+        tute.name.includes(SearchQry)        
+        )
+        setTute(result);
+      }
+      function Searchfunc (e) {
+        const SearchQry = e.currentTarget.value;
+        
+        axios.get("http://localhost:3000/tute/" + id).then((res) => {
+                filterData(res.data,SearchQry)
+            })
+            .catch((err) => {
+              alert(err.message);
+            });   
+      }
+
     return (
         <div className="container">
             <div class="#" className="container">
@@ -144,8 +163,8 @@ export default function Body(props) {
                 <a class="btn btn-dark" href={`/content/addNotice/${id}`} role="button">Add Notice</a>&nbsp; 
                 <a class="btn btn-dark" href={`/content/addLink/${id}`} role="button">Add Link</a>&nbsp; 
                 <a class="btn btn-dark" href={`/content/addTute/${id}`} role="button">Upload Tutorials</a>&nbsp; 
-                {/*<a class="btn btn-dark" href={`/content/studentView/${id}`} role="button">Student View</a>&nbsp;*/} 
-                <button type="button" class="btn btn-dark">Generate Report</button>
+                {/*<a class="btn btn-dark" href={`/content/studentView/${id}`} role="button">Student View</a>&nbsp;*/}
+                <a class="btn btn-dark" href={`/content/contentreport/${id}`} role="button">Generate Report</a>
                 <br /><br />
                 </div>
 
@@ -184,6 +203,12 @@ export default function Body(props) {
                 <br /><br />
 
                 <h5>Lessons and Tutorials</h5><br />
+            
+                <div className = "col-lg-3 mt-2 mb-2">
+                <input type="search" name="searchQuery" className = "form-control" placeholder="Search.." onChange={Searchfunc}></input>
+                </div>
+                <br /><br />
+
                 <div class="border border-dark">
                     <ol>
                         {tute.map(item =>

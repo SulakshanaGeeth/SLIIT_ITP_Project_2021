@@ -40,7 +40,7 @@ export default function AddLink(props){
                     <label for="Textarea1">Link</label>
                     <br />
 
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Add the Link Here.." onChange = {(e => {
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Add the Link Here.." required onChange = {(e => {
                         setLink(e.target.value);
                     })}></textarea>
                     <br />

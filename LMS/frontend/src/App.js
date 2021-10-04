@@ -42,6 +42,7 @@ import AddLink from './Components/ContentManagement/AddLink';
 import AddTute from './Components/ContentManagement/AddTute';
 import UpdateNotice from './Components/ContentManagement/UpdateNotice';
 import UpdateLink from './Components/ContentManagement/UpdateLink';
+import ContentReport from "./Components/ContentManagement/ContentReport";
 import StudentView from './Components/ContentManagement/StudentView';
 
 //Admin panel
@@ -107,6 +108,7 @@ const App = () => (
       <Route path = "/content/addtute/:id" exact component = {AddTute} />
       <Route path = "/content/updatenotice/:id" exact component = {UpdateNotice} />
       <Route path = "/content/updatelink/:id" exact component = {UpdateLink} />
+      <Route path = "/content/contentreport/:id" exact component = {ContentReport} />
       {/*<Route path = "/content/studentView/:id" exact component = {StudentView} />*/}
       
 

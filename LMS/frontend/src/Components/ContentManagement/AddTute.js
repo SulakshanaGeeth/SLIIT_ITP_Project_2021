@@ -22,7 +22,7 @@ export default function AddTute(props){
 
         axios.post("http://localhost:3000/tute/add", newTute).then(() => {
             alert("Tute Uploaded");
-            props.history.push('/class/'+id);
+            props.history.goBack();
         }).catch((err) => {
             alert(err)
         })
@@ -43,7 +43,7 @@ export default function AddTute(props){
                     <label for="Textarea1">Name of the Document</label>
                     <br />
 
-                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Name of the Document.." onChange={(e => {
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Name of the Document.." required onChange={(e => {
                         setName(e.target.value);
                     })}/>
                     <br /><br />
@@ -51,7 +51,7 @@ export default function AddTute(props){
                     <label for="Textarea1">Add Drive Link of the Document</label>
                     <br />
                     
-                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Add the Drive Link Here.." onChange={(e => {
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Add the Drive Link Here.." required onChange={(e => {
                         setTute(e.target.value);
                     })} />
                     <br />
