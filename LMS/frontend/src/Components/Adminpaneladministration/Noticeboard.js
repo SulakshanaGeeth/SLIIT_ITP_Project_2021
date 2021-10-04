@@ -34,7 +34,7 @@ export default function AllNotices(props){
    
     function filterData(notices, SearchQry){
         const result = notices.filter((notices)=>
-        notices.massage.toLowerCase().includes(SearchQry),
+       
         notices.date.toLowerCase().includes(SearchQry),
         
        
@@ -62,7 +62,7 @@ export default function AllNotices(props){
       <div className="container">
             <div class="content">
             <input type="search" name="searchQuery" onChange={Searchfunc}></input>
-        <h1 class="paywitdh1">Notice board</h1>
+        <h1 style={{color:"red",display: 'flex',  justifyContent:'center', alignItems:'center', height: '100vh'}}>Notice board</h1>
         
   
         <div className="box1">

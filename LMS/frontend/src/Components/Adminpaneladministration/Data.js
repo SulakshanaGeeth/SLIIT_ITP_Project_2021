@@ -12,6 +12,8 @@ const initialState = {
 
 
 export default function GetReport(props){
+  const Notice_no = props.match.params.id;
+
     const [notices ,  setNotices] = useState([]);
 
     
@@ -34,7 +36,7 @@ export default function GetReport(props){
 
     
     function pdfGenerate(){
-      var doc = new jsPDF('landscape','px','a1','false');
+      var doc = new jsPDF('landscape','px','a2','false');
       doc.html(document.querySelector("#Notices"),{
         callback: function(pdf){
           pdf.save("mypdf.pdf");
@@ -43,9 +45,10 @@ export default function GetReport(props){
     };
 
      return(
-     <div className="container">
+     <div className="container" id="Notices">
+           <div class="content">
           
-          <div class="content">
+         
               
          
 
@@ -54,10 +57,10 @@ export default function GetReport(props){
           <table className="withdraw-table">
             <thead>
               <tr>
-                                
+                              
                 <td>Massege</td>
                 <td>Date</td>
-                <td>PDF</td>
+               
                
               </tr>
             </thead>
@@ -65,23 +68,28 @@ export default function GetReport(props){
             <tbody>
               {notices.map((item)=> (
                 <tr>
-                
-                 
+                  
                   <td>{item.massege}</td>
                   <td>{item.date}</td>
-
+                  
+                  </tr>  
+                 
+                  
+                
                        
-                    <td> {<button type="button" className="btn btn-success mr-2 mb-4" button onClick={pdfGenerate}>Download pdf</button>}</td>  
+                  
          
-                    </tr>  
+                    
                  ))}   
                  </tbody>
                  </table>
-                
+                 <button type="button" className="btn btn-danger" 
+                  onClick={ pdfGenerate}>Download pdf</button>
            
      </div>
      </div>
      </div>
+     
     
      
 
