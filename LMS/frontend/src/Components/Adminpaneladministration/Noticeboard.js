@@ -55,14 +55,12 @@ export default function AllNotices(props){
             });
     
       }
-    
-    
-
+     
      return(
-      <div className="container">
-            <div class="content">
-            <input type="search" name="searchQuery" onChange={Searchfunc}></input>
-        <h1 style={{color:"red",display: 'flex',  justifyContent:'center', alignItems:'center', height: '100vh'}}>Notice board</h1>
+      <div className="container"  style={{paddingLeft:15,paddingRight:20,alignItems:"center",justifyContent:'center',justifyContent:'center'}}>
+            
+            <input type="search" placeholder="search"  name="searchQuery" onChange={Searchfunc}></input>
+        <h1 style={{color:"red",display: 'flex',  justifyContent:'center', alignItems:'center', height: '15vh'}}>Notice board</h1>
         
   
         <div className="box1">
@@ -90,9 +88,11 @@ export default function AllNotices(props){
               ))}
             </tbody>
           </table>
+          <button className="btn btn-primary" onClick={() => props.history.push("/nav")}>
+       Back</button>
         </div>
       </div>
-      </div>
+      
     
 
      )

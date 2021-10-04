@@ -29,7 +29,7 @@ export default function AddTute(props){
     }
 
     return(
-        <div>
+        <div style={{minHeight: "80vh"}}>
             <form onSubmit={sendData}>
                 <div class="form-group" className="container">
                     <br />

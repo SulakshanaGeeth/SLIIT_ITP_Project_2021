@@ -33,8 +33,8 @@ export default class Requests extends Component{
 
     render(){
         return(
-            <div className ="container">
-                <br/><br/><br/>
+            <div className ="container" style={{minHeight:"80vh"}}>
+                <br/><br/>
 
                 <h2>New Class Requests</h2><br></br>
 

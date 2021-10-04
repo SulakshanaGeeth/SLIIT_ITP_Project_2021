@@ -106,7 +106,7 @@ export default class NewClassRequestDetails extends Component{
 
     render(){
         return(
-            <div className ="container" style={{marginTop:130}}>
+            <div className ="container" style={{marginTop:130, minHeight:"65vh"}}>
                 <div className="card bg-secondary mb-3" style={{maxWidth:1000, maxHeight:320, paddingLeft:100, paddingTop:50, paddingRight:10, marginLeft:70}}>
                     <div className="card-body">
             
@@ -139,7 +139,7 @@ export default class NewClassRequestDetails extends Component{
                 
                     </div>
                 </div>
-                <br/><br/><br/><br/><br/>
+                
             </div>
         )
     }
