@@ -110,18 +110,15 @@ const App = () => (
       {/*<Route path = "/content/studentView/:id" exact component = {StudentView} />*/}
       
 
-      ​​​
+      ​​​{/* Admin panel Mangemnt */}
       <Route path="/notice/add/" exact component={AddNoticeAdmin} />
-    <Route path="/AllNotices" exact component={AllNotices} />
-   
-    <Route path = "/nav"  exact component={Navbar}/>
-    <Route path = "/vali"  exact component={ValiationForm}/>
-  
-      
-    <Route path="/notice/update/:id" exact component={Update}/>
-    <Route path="/notice/delete/:id" exact component={Delete}/>
-    <Route path = "/notieboard"  exact component={Noticeboard}/>
-    <Route path = "/pdf"  exact component={Data}/>
+      <Route path="/AllNotices" exact component={AllNotices} />
+      <Route path = "/nav"  exact component={Navbar}/>
+     <Route path = "/vali"  exact component={ValiationForm}/>
+      <Route path="/notice/update/:id" exact component={Update}/>
+      <Route path="/notice/delete/:id" exact component={Delete}/>
+      <Route path = "/notieboard"  exact component={Noticeboard}/>
+      <Route path = "/pdf"  exact component={Data}/>
 
 
 

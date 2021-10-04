@@ -98,7 +98,9 @@ export default function PendingPayments(props) {
             </div>
           </div>
         ))}
-        <button className="pdfBtnPayment" onClick={pdfGenerate}>Download pdf</button>
+        <div class="col text-center">
+        <button className="btn btn-outline-success mt-2 " onClick={pdfGenerate}>Download pdf</button>
+        </div>
       </div>
       
     </div>

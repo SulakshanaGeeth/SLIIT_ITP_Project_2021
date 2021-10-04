@@ -26,6 +26,10 @@ export default function PendingPayments(props) {
   var State = "Transferred";
 
     function UpdateData(e){
+      const confirmBox = window.confirm(
+        "Do want mark as transferred ?"
+      )
+      if (confirmBox === true) {
         e.preventDefault();
         const newState = {
             State
@@ -37,6 +41,8 @@ export default function PendingPayments(props) {
         }).catch((err)=>{
             alert(err)
         })
+      }
+       
     }
 
   return (
@@ -101,8 +107,8 @@ export default function PendingPayments(props) {
             </div>
           </div>
         ))}
-        <div className="dtBoxButton">
-        <button className="dtMarkTrans" onClick={UpdateData}
+        <div class="col text-center">
+        <button className="btn btn-outline-success" onClick={UpdateData}
         >Mark as Transferred</button>
         
         </div>

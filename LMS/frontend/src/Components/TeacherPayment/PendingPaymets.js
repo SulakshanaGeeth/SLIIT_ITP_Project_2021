@@ -74,7 +74,7 @@ export default function PendingPayments(props) {
               <tr>
                 <td>{item.Teacher_name}</td>
                 <td>
-                  <button className="" onClick={() =>getDetails(item.Teacher_ID)}>
+                  <button className="btn btn-outline-success" onClick={() =>getDetails(item.Teacher_ID)}>
                     Get Details</button>
                 </td>
                 <td>Rs. {item.Withdraw_amout}</td>

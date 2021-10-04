@@ -136,32 +136,32 @@
   margin-bottom: 10px;
 }
 .form-group2{
-  font-size: 25px;
+  font-size: 3.5vh;
 }
 
 .lb_Acc_no2{
-  margin-left: 30vw;
+  margin-left: 32vw;
   margin-bottom: 2vh;
 }
 #Acc_no2{
-  margin-left: 7vw;
+  margin-left: 7.2vw;
 }
 .lb_bank_name2{
-  margin-left: 30vw;
+  margin-left: 32vw;
   margin-bottom: 2vh;
 }
 #bank_name2{
   margin-left: 9.4vw;
 }
 .lb_branch_name2{
-  margin-left: 30vw;
+  margin-left: 32vw;
   margin-bottom: 2vh;
 }
 #branch_name2{
   margin-left: 8vw;
 }
 .lb_holder_name2{
-  margin-left: 30vw;
+  margin-left: 32vw;
 }
 #holder_name2{
   margin-left: 3vw;
@@ -258,9 +258,9 @@
 }
 .bankdetailsh1{
   
-  margin-left: 580px;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-left: 41vw;
+  margin-top: 3vh;
+  margin-bottom: 4vh;
 }
 .bank-table{
   border-collapse: collapse;
@@ -301,7 +301,7 @@
 
 /* Withdraw page */
 .displyAmount{
-  margin-left: 500px;
+  margin-left: 37vw;
   margin-bottom: 10px;
 }
 .backbtn2{
@@ -318,7 +318,7 @@
 .paywitdh1{
 
   display: inline-block;
-  margin-left: 220px;
+  margin-left: 16vw;
   font-family: 'Times New Roman', serif;
   
 }
