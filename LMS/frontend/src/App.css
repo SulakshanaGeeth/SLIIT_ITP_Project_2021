@@ -59,17 +59,6 @@
 
 }
 
-
-
-/* ExamContentManagement */
-
-
-
-
-
-
-
-
 /* Basic styles */
 *,
 *::before,
@@ -211,12 +200,12 @@ label {
 
 /* Exam Report PDF */
 
-#contents {
+/*#contents {
 
   width: 500px;
   height: 300px;
 
-} 
+} */
 
 
 
