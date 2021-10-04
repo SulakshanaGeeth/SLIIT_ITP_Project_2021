@@ -88,8 +88,7 @@ export default function AllNotices(props){
               ))}
             </tbody>
           </table>
-          <button className="btn btn-primary" onClick={() => props.history.push("/nav")}>
-       Back</button>
+         
         </div>
       </div>
       
